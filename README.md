@@ -12,7 +12,7 @@
 #### Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub. 
 
 ### Vision
-
+#### The developers will create a website that will host the library of cybersecurity tools. From there the end-user can download the tool or script and use it however they desire.
 
 ### Team Members:
 #### Anya Tewari, Kasie Madden, Anna Gillen, Viraj Shah
