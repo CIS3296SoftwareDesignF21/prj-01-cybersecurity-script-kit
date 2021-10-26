@@ -8,3 +8,11 @@
 ### How to Install
 #### This code is from scratch, the it hasn't been built yet to run.
 
+### Updates and changes
+#### Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub. 
+
+### Vision
+
+
+### Team Members:
+#### Anya Tewari, Kasie Madden, Anna Gillen, Viraj Shah
