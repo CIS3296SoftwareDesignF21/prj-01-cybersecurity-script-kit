@@ -40,6 +40,17 @@ The Computer Science Student
 
 The Developer
 
+Michael, 24, recently graduated college and held his first job. He grew up
+building websites. He initially began building static webpages, then learned
+CSS and JavaScript. Later on he learned about server-side/backend development.
+Now that he is in his second year in the workforce, he has been given more
+responsibilities, and has to ensure that he is testing the security of the new
+code every time he commits a change. These additional responsibilities are
+very burdensome, especially with all the other stuff he has to do. Although
+QA will thoroughly test for security vulnerabilities, he chooses to install
+Cyber Security Script Kit to make basic security testing easier through our
+automated process.
+
 The Blackhat Hacker
 
 -   To be added
