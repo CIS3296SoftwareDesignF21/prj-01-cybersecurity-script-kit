@@ -32,7 +32,7 @@ The Pentester
 - To be added
 
 The Computer Science Student 
-- To be added
+- Brandon, 20, is a third-year computer science student at Temple University. He is taking cybersecurity electives in hopes to develop a skillset good enough to land him a job in the field after graduation. He’s spent a few semesters learning the ins and outs of cybersecurity, and now he wants to put what he knows to practice so he can sharpen his skills and set himself apart during job interviews. He downloads the Cybersecurity Script Kit in order to complete his assignments faster while getting familiar with industry practices and necessary skills.
 
 The Developer 
 - To be added
