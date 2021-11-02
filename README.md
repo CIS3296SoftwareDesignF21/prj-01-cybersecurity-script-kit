@@ -1,7 +1,7 @@
 # _Final Project: Cybersecurity Script Kit_
 
-<font size =1><ins>Professor - Dominic Letarte</ins>
-&emsp;<ins> TA - Noah Williams</ins> </font>
+<u>Professor - Dominic Letarte</u>
+<u>TA - Noah Williams</u>
 
 -   [How to Run](#how-to-run) 🏃‍♀️
 -   [How to Install](#how-to-install) 🛠
@@ -124,17 +124,17 @@ csk – version 0.0.1
 >
 > For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain.
 
-> ### The Four Personas
->
-> The Pentester
+### The Four Personas
+
+**The Pentester**
 
 -   Michelle, 35, works for a small consulting firm that focuses on security services. She works in the lab that focuses on different types of Penetration Testing, including network and social engineering. Michelle’s job is to look for exploits and vulnerabilities for clients to maintain compliance and help reduce their risk of a cyber-attack. She often uses the Cybersecurity Script Kit for her job because it covers the full spectrum of the Cyber Kill Chain making it convenient and easy to use.
 
-The Computer Science Student
+**The Computer Science Student**
 
 -   Brandon, 20, is a third-year computer science student at Temple University. He is taking cybersecurity electives in hopes to develop a skillset good enough to land him a job in the field after graduation. He's spent a few semesters learning the ins and outs of cybersecurity, and now he wants to put what he knows to practice so he can sharpen his skills and set himself apart during job interviews. He downloads the Cybersecurity Script Kit in order to complete his assignments faster while getting familiar with industry practices.
 
-The Developer
+**The Developer**
 
 -   Michael, 24, recently graduated college and held his first job. He grew up
     building websites. He initially began building static webpages, then learned
@@ -147,13 +147,6 @@ The Developer
     Cyber Security Script Kit to make basic security testing easier through our
     automated process.
 
-The Grey Hat Hacker
+**The Grey Hat Hacker**
 
 -   Astrid, 29, works a 9-5 job, Monday – Friday as a Network Engineer at medium size tech company. She has a strong background in networking and computer science and enjoys finding solutions to difficult problems. With in the past 5 years Astrid often spends her free time on the internet looking for vulnerabilities in systems and websites. She carefully gets into sites without permission to find weaknesses then anonymously informs the administrator of the site of her findings. To help her during the process she often uses scripts from the Cybersecurity Script Kit to infiltrate sites for the quickness and ease of the library.
-
-> ## Team Members Contributions:
-
--   Anya Tewari
--   Kasie Madden
--   Anna Gillen
--   Viraj Shah
