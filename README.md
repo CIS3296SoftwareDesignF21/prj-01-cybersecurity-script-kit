@@ -122,7 +122,7 @@ csk – version 0.0.1
 Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub. 
 
 >### Vision
-The developers will create a website that will host the library of cybersecurity tools. From there the end-user can download the tool or script and use it however they desire.
+For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain. 
 
 >### The Four Personas
 The Pentester 
