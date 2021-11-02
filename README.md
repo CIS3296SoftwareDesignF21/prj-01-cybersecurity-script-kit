@@ -15,11 +15,108 @@
 
 For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. Being able to have a collection of scripts that will automate any recurring process or having set of security tools is a must for any professional in the field. Not everyone is a coding wizard, being able to have a bunch of scripts at the drop of a hat is not only helpful but convenient. The idea for this project is to create a web site that will host a small library of scrips that would complete various tasks that any beginner or expert security professional would need in the field.
 
->### How to Run
-Does not have a main function. This is executable code and will run once enabled. The execution or the code could be enable from the command line or start once downloaded on to the machine.
+## How to Run
 
->### How to Install
-This code is from scratch, the it hasn't been built yet to run.
+There are two environments where you may want to run this script kit.
+
+1. Python Interpreter (using `python3`)
+2. Natively (using `csk`)
+
+### Method 1: Python Interpreter
+
+When actively developing and testing the program, rather than building an executable
+each time, it is suggested to use `python3` to run your program. This is done just
+like any other Python 3 script.
+
+```bash
+python3 csk.py [...args]
+```
+
+_Note: The `python3` command is used as an alias when both `python2` and `python3`
+are installed._
+
+### Method 2: Natively
+
+When running the program to test if production-ready or to install the program,
+the native method is suggested.
+
+**Step 1:** Build `csk` using the `makefile`
+
+```bash
+make
+```
+
+**Step 2:** Install `csk` using the `makefile` (again).
+
+```bash
+make csk
+```
+
+**Alternatively, you can copy the executable to a location of your choice**
+
+```bash
+cp dist/csk [/path/to/installation/location]
+```
+
+**Step 3:** Add `csk` to your `PATH` environment variable.
+
+If you used `make csk` then `/usr/local/bin/` should already be added to
+your path. If you manually copied the executable to another location which
+is not already in your `PATH` environment variable, then you should add it.
+
+The alternative is to manually type out the path of your executable (**which
+is not suggested for ease of use**).
+
+**Step 4:** Run `csk`
+
+```bash
+csk [...args]
+```
+
+If you installed `csk` to another location, then the command looks like:
+
+```bash
+/path/to/csk [...args]      # For absolute path
+./path/to/csk [...args]     # For relative path
+../path/to/csk [...args]    # For parent-relative path
+```
+
+## How to Install
+
+> This section is for user-installation and will not help with the development
+> process.
+
+**Step 1:** Download the latest release from
+https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/
+
+**Step 2:** Run the installation command
+
+The future installation command will be:
+
+```bash
+csk install                 # Installs to /usr/local/bin/
+csk install /path/to/csk    # Installs to /path/to/csk
+```
+
+> Note: This feature has not been enabled yet.
+>
+> For now, the user should manually copy the executable to /usr/local/bin/
+
+**Step 3:** Test the installation
+
+```bash
+$ csk version
+csk – version 0.0.1
+
+$ csk -v    # Shorthand
+csk – version 0.0.1
+```
+
+> Note: This feature has not been enabled yet.
+>
+> Currently to test installation, run `csk`.
+> The output should be `"Hello World"` messages.
+
 
 >### Updates and changes
 Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub. 
