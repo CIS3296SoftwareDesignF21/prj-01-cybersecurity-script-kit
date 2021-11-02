@@ -14,8 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: configure
-      run: ./configure
+#     - name: configure
+#       run: ./configure
+
+    - name: Install pyinstaller
+      run: pip install pyinstaller
       
     - name: Install dependencies
       run: make
