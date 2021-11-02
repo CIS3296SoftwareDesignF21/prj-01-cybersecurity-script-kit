@@ -126,7 +126,7 @@ The developers will create a website that will host the library of cybersecurity
 
 >### The Four Personas
 The Pentester 
-- To be added
+- Michelle, 35, works for a small consulting firm that focuses on security services. She works in the lab that focuses on different types of Penetration Testing, including network and social engineering. Michelle’s job is to look for exploits and vulnerabilities for clients to maintain compliance and help reduce their risk of a cyber-attack.  She often uses the Cybersecurity Script Kit for her job because it covers the full spectrum  of the Cyber Kill Chain making it convenient and easy to use. 
 
 The Computer Science Student 
 - Brandon, 20, is a third-year computer science student at Temple University. He is taking cybersecurity electives in hopes to develop a skillset good enough to land him a job in the field after graduation. He's spent a few semesters learning the ins and outs of cybersecurity, and now he wants to put what he knows to practice so he can sharpen his skills and set himself apart during job interviews. He downloads the Cybersecurity Script Kit in order to complete his assignments faster while getting familiar with industry practices.
@@ -134,7 +134,7 @@ The Computer Science Student
 
 The Developer
 
-Michael, 24, recently graduated college and held his first job. He grew up
+- Michael, 24, recently graduated college and held his first job. He grew up
 building websites. He initially began building static webpages, then learned
 CSS and JavaScript. Later on he learned about server-side/backend development.
 Now that he is in his second year in the workforce, he has been given more
