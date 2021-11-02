@@ -146,8 +146,9 @@ Cyber Security Script Kit to make basic security testing easier through our
 automated process.
 
 
-The Blackhat Hacker
-- To be added
+The Grey Hat Hacker
+- Astrid, 29, works a 9-5 job, Monday – Friday as a Network Engineer at  medium size tech company.  She has a strong background in networking and computer science and enjoys finding solutions to difficult problems. With in the past 5 years Astrid often spends her free time on the internet looking for vulnerabilities in systems and websites. She carefully gets into sites without permission to find weaknesses then anonymously informs the administrator of the site of her findings. To help her during the process she often uses scripts from the Cybersecurity Script Kit  to infiltrate sites for the quickness and ease of the library. 
+
 
 >## Team Members Contributions:
 - Anya Tewari
