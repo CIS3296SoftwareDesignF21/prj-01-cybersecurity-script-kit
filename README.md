@@ -34,8 +34,20 @@ The Pentester
 The Computer Science Student 
 - Brandon, 20, is a third-year computer science student at Temple University. He is taking cybersecurity electives in hopes to develop a skillset good enough to land him a job in the field after graduation. He's spent a few semesters learning the ins and outs of cybersecurity, and now he wants to put what he knows to practice so he can sharpen his skills and set himself apart during job interviews. He downloads the Cybersecurity Script Kit in order to complete his assignments faster while getting familiar with industry practices.
 
-The Developer 
-- To be added
+
+The Developer
+
+Michael, 24, recently graduated college and held his first job. He grew up
+building websites. He initially began building static webpages, then learned
+CSS and JavaScript. Later on he learned about server-side/backend development.
+Now that he is in his second year in the workforce, he has been given more
+responsibilities, and has to ensure that he is testing the security of the new
+code every time he commits a change. These additional responsibilities are
+very burdensome, especially with all the other stuff he has to do. Although
+QA will thoroughly test for security vulnerabilities, he chooses to install
+Cyber Security Script Kit to make basic security testing easier through our
+automated process.
+
 
 The Blackhat Hacker
 - To be added
