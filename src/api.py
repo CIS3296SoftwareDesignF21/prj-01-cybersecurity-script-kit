@@ -1,17 +1,19 @@
-from os import chdir, system, homedir
+from os import chdir, system
+from os.path import expanduser, join as joinPath
+from functools import lru_cache
 
 
 class CLib:
     @staticmethod
     def cd(path):
-        chdir(path)
+        chdir(expanduser(path))
 
 
 class Git:
     @staticmethod
-    @cached
+    @lru_cache(maxsize=1)
     def repo_dir():
-        return f"{homedir()}/csk/repositories"
+        return joinPath(expanduser("~"), "csk/repositories")
 
     @staticmethod
     def clone(url):
