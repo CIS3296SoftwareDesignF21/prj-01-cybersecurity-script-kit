@@ -1,5 +1,5 @@
 from sys import argv, exit
-import repl
+from src import repl
 
 if __name__ == "__main__":
     exit(repl.main())
