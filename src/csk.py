@@ -1,9 +1,5 @@
-print("Hello World")  # Should work in both py2 and py3
-print("\n")
-print("Hello World, this is Anna")
+from sys import argv, exit
+import repl
 
-#taking in an input from user to reverse a string 
-#From Kasie
-print("\n")
-inString = input("Enter an String: ")
-print ("Your string backwards is: " + inString[::-1] )
+if __name__ == "__main__":
+    exit(repl.main())
