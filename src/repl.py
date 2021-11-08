@@ -1,5 +1,6 @@
 from os import getcwd, system, chdir
-from src import getargs, api
+from src import getargs
+from src.api import Git, CLib
 
 
 def prompt() -> str:
@@ -19,9 +20,9 @@ def main() -> int:
         elif cmd == "version":
             print("0.0.1-alpha")
         elif cmd == "cd":
-            api.cd(args[0])
+            CLib.cd(args[0])
         elif cmd == "clone":
-            api.clone(*args)
+            Git.clone(*args)
         else:
             system(prompt_input)
 
