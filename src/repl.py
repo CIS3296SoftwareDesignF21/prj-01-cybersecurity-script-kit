@@ -24,6 +24,8 @@ def main() -> int:
             CLib.cd(args[0])
         elif cmd == "clone":
             Git.clone(*args)
+        elif cmd == "certifi":  # Installs certificates via Certifi
+            CLib.certifi_install()
         else:
             system(prompt_input)
 
