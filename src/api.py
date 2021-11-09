@@ -5,14 +5,17 @@ from functools import lru_cache
 
 class CLib:
     @staticmethod
-    def cd(path):
-        chdir(expanduser(path))
+    def cd(path) -> None:
+        try:
+            chdir(expanduser(path))
+        except FileNotFoundError:
+            print(f"File Not Found: {path}")
 
 
 class Git:
     @staticmethod
     @lru_cache(maxsize=1)
-    def repo_dir():
+    def repo_dir() -> str:
         return joinPath(expanduser("~"), "csk/repositories")
 
     @staticmethod
