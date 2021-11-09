@@ -13,4 +13,4 @@ def getcmd(s: str) -> str:
 
 @lru_cache(maxsize=5)
 def getargs(s: str) -> list:
-    return s.split(" ")
+    return [sym for sym in s.split(" ") if sym.strip() != ""]
