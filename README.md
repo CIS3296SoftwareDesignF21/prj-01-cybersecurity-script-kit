@@ -156,6 +156,7 @@ For any user who would benefit from a quick and easy way to run cybersecurity sc
 
 ## UML Diagram
 
+Main file is CKS  that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo and will install certificate. 
 
 ![CSK_UML](https://user-images.githubusercontent.com/44176460/140883573-433ea037-7dce-46ca-a846-f768ac414d64.png) 
 
