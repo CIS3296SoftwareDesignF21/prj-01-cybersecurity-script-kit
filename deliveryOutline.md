@@ -1,5 +1,6 @@
 # Delivery Script Outline
 ### Delivery Method: DNS Spoofing
+### Specifically- MITM
 - Using Scapy in Python (install first, manipulates packets: forge, decode, etc.)
 - Utilize NetfilterQueue library (give access to packets matched by Linux iptables rule)
 1. Command line: enter iptables rule: when packet is forwarded, redirect to netfilter queue no. 0: reditect all forwarded packets to Py
