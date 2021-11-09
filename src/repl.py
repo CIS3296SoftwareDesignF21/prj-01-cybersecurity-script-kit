@@ -1,6 +1,7 @@
 from os import getcwd, system, chdir
 from src import getargs
 from src.api import Git, CLib
+from sys import exit
 
 
 def prompt() -> str:
