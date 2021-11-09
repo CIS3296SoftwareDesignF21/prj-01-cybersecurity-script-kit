@@ -18,3 +18,4 @@
   8. Check if website is in record, if not then do not modify
   9. create new answer (spoof), override original, set rda to redirect to IP of choice 
   10. return modified packet
+- Python Doc Page: https://www.thepythoncode.com/code/make-dns-spoof-python
