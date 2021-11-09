@@ -40,4 +40,7 @@
 - Func to create similar access point to the access point we want to perform attack on
 -  Prepare the environment setup for creating the fake access point
 -  Display the duplicates access point , and execute the defence on the Network
+- Python Doc Page: https://www.thepythoncode.com/article/create-fake-access-points-scapy
+- Github Doc: https://github.com/s0lst1c3/evil_twin/blob/master/utils.py
+
 
