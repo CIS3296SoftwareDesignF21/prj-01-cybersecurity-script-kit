@@ -55,3 +55,24 @@
 
 Doc: https://www.kaspersky.com/resource-center/definitions/drive-by-download
 
+#### Delivery Method 4: Remote Desktop Protocol
+- created to enable IT administrators to securely access a user’s machine remotely to configure it, or to simply use the machine
+- RDP typically runs over port 3389
+- search for machines on search engines such as Shodan.io to find devices that are vulnerable to infection
+- gain access by brute-forcing the password 
+- log on as an administrator
+-Use Open source password-cracking tools to help achieve this objective
+  - Popular tools: Cain and Able, John the Ripper, and Medusa
+ - disable the endpoint security software running on the machine or delete Windows file backups prior to running the ransomware
+ - Doc: https://www.itproportal.com/features/the-four-most-popular-methods-hackers-use-to-spread-ransomware/
+ 
+ #### Delivery Method 5: HID Spoofing
+ ##### USB 
+ - Configure your payload
+    - use python config script
+    - manually config
+ - compile & upload payload to removable media
+ - configure server
+ - control a reverse shell
+ - Doc: https://github.com/ebursztein/malusb
+ 
