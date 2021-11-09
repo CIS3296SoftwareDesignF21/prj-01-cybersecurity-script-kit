@@ -16,5 +16,5 @@ class Git:
         return joinPath(expanduser("~"), "csk/repositories")
 
     @staticmethod
-    def clone(url):
+    def clone(url) -> None:
         system(f"git clone https://github.com/{url} {Git.repo_dir()}")
