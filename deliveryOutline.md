@@ -19,3 +19,25 @@
   9. create new answer (spoof), override original, set rda to redirect to IP of choice 
   10. return modified packet
 - Python Doc Page: https://www.thepythoncode.com/code/make-dns-spoof-python
+
+#### Delivery Method: Fake wifi access point
+#### MITM
+1. Create fake wifi access point
+2. Set up fake captive portal, i.e. wifi login page
+3. Wait for victim to connect to wifi
+4. Steal data
+- MIMT: anyone who logs in connects via attacker
+##### Use scapy
+- sniff to find valid mac adress, and also if includes AP mac addy: if so it will save info to global list 
+- create 2 packets, one fake pkt will send from device to AP & request to disconnect from AP; other pkt will send from AP to device 
+- each pkt is deauthentication packet 
+- return the access point data from the ap_list by giving index
+#### Class to excecute attack
+-  prepare the environment: stop all the running network processes
+- Function for searching for networks that we can attack & request from the user to chose the network we want to attack
+-  Function for searching for clients in a specific access point that we can attack and request from the user to chose the client we want to perform attack on.
+- Function to perform deauthentication attack by given a client mac adress and access point mac address.
+- Func to create similar access point to the access point we want to perform attack on
+-  Prepare the environment setup for creating the fake access point
+-  Display the duplicates access point , and execute the defence on the Network
+
