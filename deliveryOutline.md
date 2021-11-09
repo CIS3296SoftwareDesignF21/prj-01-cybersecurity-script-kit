@@ -1,5 +1,5 @@
 # Delivery Script Outline
-### Delivery Method: DNS Spoofing
+### Delivery Method 1: DNS Spoofing
 ### Specifically- MITM
 - Using Scapy in Python (install first, manipulates packets: forge, decode, etc.)
 - Utilize NetfilterQueue library (give access to packets matched by Linux iptables rule)
@@ -20,7 +20,7 @@
   10. return modified packet
 - Python Doc Page: https://www.thepythoncode.com/code/make-dns-spoof-python
 
-#### Delivery Method: Fake wifi access point
+#### Delivery Method 2: Fake wifi access point
 #### MITM
 1. Create fake wifi access point
 2. Set up fake captive portal, i.e. wifi login page
@@ -32,7 +32,7 @@
 - create 2 packets, one fake pkt will send from device to AP & request to disconnect from AP; other pkt will send from AP to device 
 - each pkt is deauthentication packet 
 - return the access point data from the ap_list by giving index
-#### Class to excecute attack
+##### Class to excecute attack
 -  prepare the environment: stop all the running network processes
 - Function for searching for networks that we can attack & request from the user to chose the network we want to attack
 -  Function for searching for clients in a specific access point that we can attack and request from the user to chose the client we want to perform attack on.
@@ -43,4 +43,15 @@
 - Python Doc Page: https://www.thepythoncode.com/article/create-fake-access-points-scapy
 - Github Doc: https://github.com/s0lst1c3/evil_twin/blob/master/utils.py
 
+#### Delivery Method 3: Drive By Download
+#### Authorized Downloads w/Hidden Payloads
+1. Create a vector for malware delivery
+- create online ad
+2. Victim interacts w/Vector
+- clicks deceptive link in ad
+3. Malware installs on victim device
+4. Device is successfully entered by attacker
+##### use bundleware method to deliver malware
+
+Doc: https://www.kaspersky.com/resource-center/definitions/drive-by-download
 
