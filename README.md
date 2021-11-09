@@ -119,15 +119,15 @@ csk – version 0.0.1
 > Currently to test installation, run `csk`.
 > The output should be `"Hello World"` messages.
 
-> ### Updates and changes
+ ## Updates and changes
 >
-> Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
+Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
 
-> ### Vision
+ ## Vision
 >
-> For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain.
+For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain.
 
-### The Four Personas
+## The Four Personas
 
 **The Pentester**
 
@@ -153,3 +153,9 @@ csk – version 0.0.1
 **The Grey Hat Hacker**
 
 -   Astrid, 29, works a 9-5 job, Monday – Friday as a Network Engineer at medium size tech company. She has a strong background in networking and computer science and enjoys finding solutions to difficult problems. With in the past 5 years Astrid often spends her free time on the internet looking for vulnerabilities in systems and websites. She carefully gets into sites without permission to find weaknesses then anonymously informs the administrator of the site of her findings. To help her during the process she often uses scripts from the Cybersecurity Script Kit to infiltrate sites for the quickness and ease of the library.
+
+## UML Diagram
+
+
+![CSK_UML](https://user-images.githubusercontent.com/44176460/140883573-433ea037-7dce-46ca-a846-f768ac414d64.png) 
+
