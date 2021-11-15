@@ -1,17 +1,19 @@
-#Display Hostname https://www.geeksforgeeks.org/display-hostname-ip-address-python/
-#Code changed: original doesn't work on Mac unless host database is changed
+#Display local machine Hostname https://www.geeksforgeeks.org/display-hostname-ip-address-python/
+#Code changed: original doesn't work on Mac Sierra and newer unless host database is changed
 
 import socket
+import sys
+
+def __init__():
+    pass
  
 # Function to display hostname
-def get_Host_name_IP():
+def run() -> None:
     try:
         host_name = socket.gethostname()
         print("Hostname :  ",host_name)
     except:
         print("Unable to get Hostname")
  
-# Driver code
-get_Host_name_IP() #Function call
- 
-#This code is contributed by "Sharad_Bhardwaj".
+if __name__ == "__main__":
+    run(sys.argv[1])
