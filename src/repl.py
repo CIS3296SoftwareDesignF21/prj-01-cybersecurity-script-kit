@@ -1,6 +1,8 @@
 from os import getcwd, system, chdir
 from src import getargs
 from src.api import Git, CLib
+from src.kit import recon1
+from sys import exit
 
 
 def prompt() -> str:
@@ -23,6 +25,13 @@ def main() -> int:
             CLib.cd(args[0])
         elif cmd == "clone":
             Git.clone(*args)
+        elif cmd == "certifi":  # Installs certificates via Certifi
+            CLib.certifi_install()
+        elif cmd == "recon":
+            if args[0] == "1":
+                recon1.run(args[1] if len(args) > 1 else input("URL: "))
+            else:
+                print(f"Could not find script with matching number: {args[0]}")
         else:
             system(prompt_input)
 
