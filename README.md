@@ -3,22 +3,27 @@
 <u>Professor - Dominic Letarte</u>
 <u>TA - Noah Williams</u>
 
--   [How to Run](#how-to-run) 🏃‍♀️
--   [How to Install](#how-to-install) 🛠
--   [Updated and Changes](#updates-and-changes) ⬆️
--   [Vision](#vision) 👁
--   [The Four Personas](#the-four-personas) 💁
--   [Team Member Contributions](#team-member-contributions) ✍️
+|     | Table of Contents                                     |
+| --- | ----------------------------------------------------- |
+| 🛠   | [Installation](#installation)                         |
+| 🥷   | [Usage](#usage)                                       |
+| 👨‍💻  | [Development Instructions](#development-instructions) |
+| ⬆️  | [Updates and Changes](#updates-and-changes)           |
+| 👁   | [Vision](#vision)                                     |
+| 💁  | [The Four Personas](#the-four-personas)               |
+| 📊  | [UML Diagram](#uml-diagram)                           |
 
+&nbsp; 🔷 &nbsp;
 [Week One Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week1.md)
-
+&nbsp; 🔷 &nbsp;
 [Week Two Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week2.md)
-
+&nbsp; 🔷 &nbsp;
 [Week Three Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week3.md)
+&nbsp; 🔷 &nbsp;
 
 For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. Being able to have a collection of scripts that will automate any recurring process or having set of security tools is a must for any professional in the field. Not everyone is a coding wizard, being able to have a bunch of scripts at the drop of a hat is not only helpful but convenient. The idea for this project is to create a web site that will host a small library of scrips that would complete various tasks that any beginner or expert security professional would need in the field.
 
-## How to Install
+## Installation
 
 > This section is for user-installation and will not help with the development
 > process.
@@ -26,10 +31,20 @@ For any cybersecurity professional, scripting is an important part of testing th
 **Step 1:** Download the latest stable release for your system.
 
 | ![](readme/csk-download.png) | ![](readme/csk-download-linux.png) | ![](readme/csk-download-windows.png) |
+| ---------------------------- | ---------------------------------- | ------------------------------------ |
 
-**Step 2:** Install the software.
+**Step 2:** Run the installer.
 
-## How to Run
+> The installer will download the latest stable release, build the software, and install it.
+> After this, `csk` is ready.
+
+## Usage
+
+Checking version and platform information: `csk -v` or `csk --version`.
+
+Getting help with usage: `csk -h` or `csk --help`.
+
+## Development Instructions
 
 When running the program to test if production-ready or to install the program,
 the native method is suggested.
