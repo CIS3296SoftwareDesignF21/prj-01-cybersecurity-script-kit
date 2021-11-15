@@ -23,35 +23,11 @@ For any cybersecurity professional, scripting is an important part of testing th
 > This section is for user-installation and will not help with the development
 > process.
 
-**Step 1:** Download the latest stable release for your system
+**Step 1:** Download the latest stable release for your system.
 
-**Step 2:** Run the installation command
+| ![](readme/csk-download.png) | ![](readme/csk-download-linux.png) | ![](readme/csk-download-windows.png) |
 
-The future installation command will be:
-
-```bash
-csk install                 # Installs to /usr/local/bin/
-csk install /path/to/csk    # Installs to /path/to/csk
-```
-
-> Note: This feature has not been enabled yet.
->
-> For now, the user should manually copy the executable to /usr/local/bin/
-
-**Step 3:** Test the installation
-
-```bash
-$ csk version
-csk – version 0.0.1
-
-$ csk -v    # Shorthand
-csk – version 0.0.1
-```
-
-> Note: This feature has not been enabled yet.
->
-> Currently to test installation, run `csk`.
-> The output should be `"Hello World"` messages.
+**Step 2:** Install the software.
 
 ## How to Run
 
