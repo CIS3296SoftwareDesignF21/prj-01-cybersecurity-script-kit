@@ -18,27 +18,42 @@
 
 For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. Being able to have a collection of scripts that will automate any recurring process or having set of security tools is a must for any professional in the field. Not everyone is a coding wizard, being able to have a bunch of scripts at the drop of a hat is not only helpful but convenient. The idea for this project is to create a web site that will host a small library of scrips that would complete various tasks that any beginner or expert security professional would need in the field.
 
-## How to Run
+## How to Install
 
-There are two environments where you may want to run this script kit.
+> This section is for user-installation and will not help with the development
+> process.
 
-1. Python Interpreter (using `python3`)
-2. Natively (using `csk`)
+**Step 1:** Download the latest stable release for your system
 
-### Method 1: Python Interpreter
+**Step 2:** Run the installation command
 
-When actively developing and testing the program, rather than building an executable
-each time, it is suggested to use `python3` to run your program. This is done just
-like any other Python 3 script.
+The future installation command will be:
 
 ```bash
-python3 csk.py [...args]
+csk install                 # Installs to /usr/local/bin/
+csk install /path/to/csk    # Installs to /path/to/csk
 ```
 
-_Note: The `python3` command is used as an alias when both `python2` and `python3`
-are installed._
+> Note: This feature has not been enabled yet.
+>
+> For now, the user should manually copy the executable to /usr/local/bin/
 
-### Method 2: Natively
+**Step 3:** Test the installation
+
+```bash
+$ csk version
+csk – version 0.0.1
+
+$ csk -v    # Shorthand
+csk – version 0.0.1
+```
+
+> Note: This feature has not been enabled yet.
+>
+> Currently to test installation, run `csk`.
+> The output should be `"Hello World"` messages.
+
+## How to Run
 
 When running the program to test if production-ready or to install the program,
 the native method is suggested.
@@ -83,42 +98,6 @@ If you installed `csk` to another location, then the command looks like:
 ./path/to/csk [...args]     # For relative path
 ../path/to/csk [...args]    # For parent-relative path
 ```
-
-## How to Install
-
-> This section is for user-installation and will not help with the development
-> process.
-
-**Step 1:** Download the latest release from
-https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/
-
-**Step 2:** Run the installation command
-
-The future installation command will be:
-
-```bash
-csk install                 # Installs to /usr/local/bin/
-csk install /path/to/csk    # Installs to /path/to/csk
-```
-
-> Note: This feature has not been enabled yet.
->
-> For now, the user should manually copy the executable to /usr/local/bin/
-
-**Step 3:** Test the installation
-
-```bash
-$ csk version
-csk – version 0.0.1
-
-$ csk -v    # Shorthand
-csk – version 0.0.1
-```
-
-> Note: This feature has not been enabled yet.
->
-> Currently to test installation, run `csk`.
-> The output should be `"Hello World"` messages.
 
 ## Updates and changes
 
