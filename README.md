@@ -3,43 +3,40 @@
 <u>Professor - Dominic Letarte</u>
 <u>TA - Noah Williams</u>
 
--   [How to Run](#how-to-run) 🏃‍♀️
--   [How to Install](#how-to-install) 🛠
--   [Updated and Changes](#updates-and-changes) ⬆️
--   [Vision](#vision) 👁
--   [The Four Personas](#the-four-personas) 💁
--   [Team Member Contributions](#team-member-contributions) ✍️
+|     | Table of Contents                                     |
+| --- | ----------------------------------------------------- |
+| 🛠   | [Installation](#installation)                         |
+| 🥷   | [Usage](#usage)                                       |
+| 👨‍💻  | [Development Instructions](#development-instructions) |
+| ⬆️  | [Updates and Changes](#updates-and-changes)           |
+| 👁   | [Vision](#vision)                                     |
+| 💁  | [The Four Personas](#the-four-personas)               |
+| 📊  | [UML Diagram](#uml-diagram)                           |
 
+&nbsp; 🔷 &nbsp;
 [Week One Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week1.md)
-
-
+&nbsp; 🔷 &nbsp;
 [Week Two Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week2.md)
-
+&nbsp; 🔷 &nbsp;
 [Week Three Markdown](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week3.md)
+&nbsp; 🔷 &nbsp;
 
 For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. Being able to have a collection of scripts that will automate any recurring process or having set of security tools is a must for any professional in the field. Not everyone is a coding wizard, being able to have a bunch of scripts at the drop of a hat is not only helpful but convenient. The idea for this project is to create a web site that will host a small library of scrips that would complete various tasks that any beginner or expert security professional would need in the field.
 
-## How to Run
+## Installation
 
-There are two environments where you may want to run this script kit.
+| [![](readme/downloads/csk-darwin.png)](installer/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
 
-1. Python Interpreter (using `python3`)
-2. Natively (using `csk`)
+After downloading, double click the file. Done. 😀 👍
 
-### Method 1: Python Interpreter
+## Usage
 
-When actively developing and testing the program, rather than building an executable
-each time, it is suggested to use `python3` to run your program. This is done just
-like any other Python 3 script.
+Checking version and platform information: `csk -v` or `csk --version`.
 
-```bash
-python3 csk.py [...args]
-```
+Getting help with usage: `csk -h` or `csk --help`.
 
-_Note: The `python3` command is used as an alias when both `python2` and `python3`
-are installed._
-
-### Method 2: Natively
+## Development Instructions
 
 When running the program to test if production-ready or to install the program,
 the native method is suggested.
@@ -85,49 +82,13 @@ If you installed `csk` to another location, then the command looks like:
 ../path/to/csk [...args]    # For parent-relative path
 ```
 
-## How to Install
+## Updates and changes
 
-> This section is for user-installation and will not help with the development
-> process.
+> Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
 
-**Step 1:** Download the latest release from
-https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/
+## Vision
 
-**Step 2:** Run the installation command
-
-The future installation command will be:
-
-```bash
-csk install                 # Installs to /usr/local/bin/
-csk install /path/to/csk    # Installs to /path/to/csk
-```
-
-> Note: This feature has not been enabled yet.
->
-> For now, the user should manually copy the executable to /usr/local/bin/
-
-**Step 3:** Test the installation
-
-```bash
-$ csk version
-csk – version 0.0.1
-
-$ csk -v    # Shorthand
-csk – version 0.0.1
-```
-
-> Note: This feature has not been enabled yet.
->
-> Currently to test installation, run `csk`.
-> The output should be `"Hello World"` messages.
-
- ## Updates and changes
->
-Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
-
- ## Vision
->
-For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain.
+> For any user who would benefit from a quick and easy way to run cybersecurity scripts, the Cybersecurity Script Kit is a command line tool that automates cybersecurity scripts. Unlike other script kits, the Cybersecurity Script Kit covers all phases of the cybersecurity kill chain.
 
 ## The Four Personas
 
@@ -158,7 +119,6 @@ For any user who would benefit from a quick and easy way to run cybersecurity sc
 
 ## UML Diagram
 
-Main file is CKS  that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo and will install certificate. 
+Main file is CKS that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo and will install certificate.
 
-![CSK_UML](https://user-images.githubusercontent.com/44176460/140883573-433ea037-7dce-46ca-a846-f768ac414d64.png) 
-
+![CSK_UML](https://user-images.githubusercontent.com/44176460/140883573-433ea037-7dce-46ca-a846-f768ac414d64.png)
