@@ -25,18 +25,10 @@ For any cybersecurity professional, scripting is an important part of testing th
 
 ## Installation
 
-> This section is for user-installation and will not help with the development
-> process.
+| [![](readme/downloads/csk-darwin.png)](installer/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
 
-**Step 1:** Download the latest stable release for your system.
-
-| ![](readme/csk-download.png) | ![](readme/csk-download-linux.png) | ![](readme/csk-download-windows.png) |
-| ---------------------------- | ---------------------------------- | ------------------------------------ |
-
-**Step 2:** Run the installer.
-
-> The installer will download the latest stable release, build the software, and install it.
-> After this, `csk` is ready.
+After downloading, double click the file. Done. 😀 👍
 
 ## Usage
 
