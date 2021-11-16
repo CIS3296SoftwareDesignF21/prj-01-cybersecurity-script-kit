@@ -1,6 +1,6 @@
 from os import getcwd, system, chdir
 from src import getargs
-from src.api import Git, CLib
+from src.api import Git, CLib, Installer
 from src.kit import recon1
 from sys import exit
 
@@ -26,7 +26,7 @@ def main() -> int:
         elif cmd == "clone":
             Git.clone(*args)
         elif cmd == "certifi":  # Installs certificates via Certifi
-            CLib.certifi_install()
+            Installer.certifi()
         elif cmd == "recon":
             if args[0] == "1":
                 recon1.run(args[1] if len(args) > 1 else input("URL: "))
