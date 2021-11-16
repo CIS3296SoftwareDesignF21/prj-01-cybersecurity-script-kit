@@ -135,4 +135,5 @@ Use Case 2
 
 This sequence diagram shows how the user would go about running the script that gets header information. After the main function is invoked, the user is prompted to input a command. The user's input is parsed with the getcmd() command. The selected script's run() method is called with the user's selected URL. The header information is printed to the terminal.
 
-![CSK_UML](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/sequenceDiagrams/sd2.png?raw=true)
+![CSK](https://user-images.githubusercontent.com/4074683/142000069-0cab529f-a541-466b-9952-e60c1cdf8ab1.jpg)
+
