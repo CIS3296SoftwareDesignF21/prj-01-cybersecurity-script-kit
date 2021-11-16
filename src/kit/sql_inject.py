@@ -6,7 +6,9 @@ from pprint import pprint
 
 
 s = requests.Session()
-s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+s.headers[
+    "User-Agent"
+] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
 
 
 def get_all_forms(url):
@@ -25,16 +27,16 @@ def get_form_details(form):
         action = form.attrs.get("action").lower()
     except:
         action = None
-   
+
     method = form.attrs.get("method", "get").lower()
-   
+
     inputs = []
     for input_tag in form.find_all("input"):
         input_type = input_tag.attrs.get("type", "text")
         input_name = input_tag.attrs.get("name")
         input_value = input_tag.attrs.get("value", "")
         inputs.append({"type": input_type, "name": input_name, "value": input_value})
-  
+
     details["action"] = action
     details["method"] = method
     details["inputs"] = inputs
@@ -42,7 +44,7 @@ def get_form_details(form):
 
 
 def is_vulnerable(response):
-    """A simple boolean function that determines whether a page 
+    """A simple boolean function that determines whether a page
     is SQL Injection vulnerable from its `response`"""
     errors = {
         # MySQL
@@ -62,18 +64,18 @@ def is_vulnerable(response):
 
 
 def scan_sql_injection(url):
-  
+
     for c in "\"'":
-       
+
         new_url = f"{url}{c}"
         print("[!] Trying", new_url)
-     
+
         res = s.get(new_url)
         if is_vulnerable(res):
-            
+
             print("[+] SQL Injection vulnerability detected, link:", new_url)
             return
-   
+
     forms = get_all_forms(url)
     print(f"[+] Detected {len(forms)} forms on {url}.")
     for form in forms:
@@ -82,29 +84,33 @@ def scan_sql_injection(url):
             data = {}
             for input_tag in form_details["inputs"]:
                 if input_tag["value"] or input_tag["type"] == "hidden":
-                
+
                     try:
                         data[input_tag["name"]] = input_tag["value"] + c
                     except:
                         pass
                 elif input_tag["type"] != "submit":
-                    
+
                     data[input_tag["name"]] = f"test{c}"
-        
+
             url = urljoin(url, form_details["action"])
             if form_details["method"] == "post":
                 res = s.post(url, data=data)
             elif form_details["method"] == "get":
                 res = s.get(url, params=data)
-            
+
             if is_vulnerable(res):
                 print("[+] SQL Injection vulnerability detected, link:", url)
                 print("[+] Form:")
                 pprint(form_details)
-                break   
+                break
 
-if __name__ == "__main__":
+
+def run() -> None:
     url = input("Enter URL to check: ")
     print("\n")
     scan_sql_injection(url)
 
+
+if __name__ == "__main__":
+    run()

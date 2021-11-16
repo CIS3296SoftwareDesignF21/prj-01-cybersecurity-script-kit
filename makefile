@@ -1,5 +1,5 @@
 csk: src/csk.py
-	pyinstaller -F src/csk.py
+	pyinstaller -F src/csk.py --paths=src
 
 install: src/csk.py
 	# make csk
