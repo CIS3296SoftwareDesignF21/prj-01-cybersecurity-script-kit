@@ -35,6 +35,16 @@ def repl() -> int:
             password_cracker.run()
         elif cmd == "sql-inject":
             sql_inject.run()
+        elif cmd == "install":
+            if args[0] == "--deps" or args[0] == "-d":
+                if args[1] == "sql-scanner":
+                    Installer.sql_scanner_deps()
+                elif args[1] == "keylogger":
+                    Installer.keylogger_deps()
+                else:
+                    print(f"Package {args[1]} does not exist or has no dependencies")
+            else:
+                print(f"No package found with name {args[0]}")
         else:
             system(prompt_input)
 
