@@ -1,7 +1,7 @@
 from os import getcwd, system, chdir
 from src import getargs
 from src.api import Git, CLib, Installer
-from src.kit import recon1
+from src.kit import http_headers, password_cracker, port_scanner, sql_inject
 from sys import exit
 
 
@@ -27,11 +27,8 @@ def main() -> int:
             Git.clone(*args)
         elif cmd == "certifi":  # Installs certificates via Certifi
             Installer.certifi()
-        elif cmd == "recon":
-            if args[0] == "1":
-                recon1.run(args[1] if len(args) > 1 else input("URL: "))
-            else:
-                print(f"Could not find script with matching number: {args[0]}")
+        elif cmd == "http-headers":
+            http_headers.run(args[0] if len(args) > 0 else input("URL: "))
         else:
             system(prompt_input)
 
