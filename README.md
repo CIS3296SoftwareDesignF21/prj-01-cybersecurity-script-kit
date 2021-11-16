@@ -25,8 +25,8 @@ For any cybersecurity professional, scripting is an important part of testing th
 
 ## Installation
 
-| [![](readme/downloads/csk-darwin.png)](installer/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [![](readme/downloads/csk-darwin.png)](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/releases/download/v0.0.3-beta/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
 
 After downloading, double click the file. Done. 😀 👍
 
