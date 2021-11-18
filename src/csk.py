@@ -5,6 +5,19 @@ import getargs
 from os import system
 from api import CLib, Git, Installer
 from kit import http_headers, password_cracker, sql_inject
+import platform
+
+
+def print_art() -> None:
+    print(
+        """
+ ██████ ███████ ██   ██     ██    ██  ██████      ██████     ██   ██ 
+██      ██      ██  ██      ██    ██ ██  ████    ██  ████    ██   ██ 
+██      ███████ █████       ██    ██ ██ ██ ██    ██ ██ ██    ███████ 
+██           ██ ██  ██       ██  ██  ████  ██    ████  ██         ██ 
+ ██████ ███████ ██   ██       ████    ██████  ██  ██████  ██      ██                                                                
+    """
+    )
 
 
 def prompt() -> str:
@@ -12,6 +25,8 @@ def prompt() -> str:
 
 
 def repl() -> int:
+    print_art()
+    print(f"CSK v0.0.4 – {platform.system()}")
     while True:
         prompt_input = prompt()  # Get the input from the prompt
         cmd = getargs.getcmd(prompt_input)  # Extract the command from the input
