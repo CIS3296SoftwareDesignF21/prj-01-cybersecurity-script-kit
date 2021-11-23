@@ -62,6 +62,7 @@ Doc: https://www.kaspersky.com/resource-center/definitions/drive-by-download
 -Start spoofing
 -Display the information of the numbers of packets sent
 -re-set the ARP tables of the spoofed address to defaults after spoofing
+doc: https://www.thepythoncode.com/article/building-arp-spoofer-using-scapy
  
  #### Delivery Method 5: HID Spoofing
  ##### USB 
