@@ -1,0 +1,11 @@
+smtp:
+    default:
+        host: smtp.server
+        port: 465
+        user: lilybmckenna@gmail.com
+        pass: Underthetab1e
+    google:
+        host: smtp.gmail.com
+        port: 465
+        user: lilybmckenna@gmail.com
+        pass: Underthetab1e
