@@ -1,5 +1,7 @@
 #https://www.geeksforgeeks.org/python-script-to-change-mac-address-of-linux-machine/?ref=lbp
 
+#example input: python3 changeMac.py -i enp1s0
+
 # Python Script to change MAC Address
 
 # Import Useful modules
