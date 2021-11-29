@@ -1,3 +1,5 @@
+#https://github.com/ngimb64/HardDrive-Crawler
+
 import re, os, pathlib, logging, shutil, smtplib
 from time import time
 from hashlib import sha512
