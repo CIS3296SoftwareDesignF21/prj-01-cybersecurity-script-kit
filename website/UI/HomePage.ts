@@ -6,6 +6,7 @@ import IonIcon from '@Hi/Components/IonIcon';
 import ScrollView from '@Hi/Components/ScrollView';
 import TextView from '@Hi/Components/TextView';
 import VStack from '@Hi/Components/VStack';
+import Heading from './Heading';
 import NavigationPanel from './NavigationPanel';
 import WebsitePanel from './WebsitePanel';
 
@@ -21,9 +22,7 @@ export default class HomePage extends VStack {
                         .background(HColor('gray')),
 
                     new WebsitePanel(
-                        new IonIcon('help').font(50).margin({ bottom: 25 }),
-
-                        new TextView('What is CSK?').font(50),
+                        new Heading('What is CSK?', new IonIcon('help')),
 
                         new TextView(
                             'CSK is a set of tools and libraries for cyber security. You get out-of-the-box features, such as sniffing HTTP requests, accessing HTTP headers, a keylogger, and more! CSK comes packaged as a shell which can be run in the Mac/Linux terminal environments (bash/zsh) along with Windows PowerShell.'
@@ -39,9 +38,7 @@ export default class HomePage extends VStack {
                     ),
 
                     new WebsitePanel(
-                        new IonIcon('download-outline').font(50).margin({ bottom: 25 }),
-
-                        new TextView('Download and Installation').font(50),
+                        new Heading('Download & Installation', new IonIcon('download')),
 
                         new TextView(
                             "We tried making this process as simple as possible. You can access each of our releases via GitHub. Prior to installation, please make sure you have Python 3.7+ installed, along with pip (Python's package manager), and pyinstaller."

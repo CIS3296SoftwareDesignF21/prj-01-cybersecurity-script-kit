@@ -7,6 +7,7 @@ import ScrollView from '@Hi/Components/ScrollView';
 import Spacer from '@Hi/Components/Spacer';
 import TextView from '@Hi/Components/TextView';
 import VStack from '@Hi/Components/VStack';
+import Heading from './Heading';
 import NavigationPanel from './NavigationPanel';
 import WebsitePanel from './WebsitePanel';
 
@@ -18,12 +19,10 @@ export default class KillchainPage extends VStack {
             new ScrollView(
                 new VStack(
                     new WebsitePanel(
-                        new IonIcon('shield')
-                            .font(50)
-                            .margin({ bottom: 25 })
-                            .foreground(HColor('green')),
-
-                        new TextView('The Cyber Killchain').font(50),
+                        new Heading(
+                            'The Cyber Killchain',
+                            new IonIcon('shield').foreground(HColor('green'))
+                        ),
 
                         new TextView(
                             'The Cyber Killchain is a series of events that occur in the course of a cyber attack. The events are categorized into three categories: Information, Intrusion, and Exploitation.'
