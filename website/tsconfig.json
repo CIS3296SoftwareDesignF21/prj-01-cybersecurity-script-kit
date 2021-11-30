@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "lib": ["esnext", "dom"],
+        "rootDir": "./",
+        "outDir": "./test/bin",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "target": "es6",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "@Hi/*": ["./Client/ts/*"],
+            "@UI/*": ["./UI/*"],
+            "@Components/*": ["./components/*"],
+            "@Triggers/*": ["./triggers/*"],
+            "@Resources/*": ["./resources/*"],
+            "@Models/*": ["./Models/*"]
+        },
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["./node_modules", "./out", "./**/*.spec.ts", "./**/*.mock.ts"]
+}
