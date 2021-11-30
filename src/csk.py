@@ -53,7 +53,7 @@ def repl() -> int:
         elif cmd == "password-cracker":
             program = KitImportUtil.include("password_cracker")
             program.run()
-        elif cmd == "sql-inject":
+        elif cmd == "sql-inject":  # everything working up to here
             program = KitImportUtil.include("sql_inject")
             program.run()
         elif cmd == "floodSYN":
