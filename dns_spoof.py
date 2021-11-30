@@ -2,6 +2,7 @@
 #pip install scapy
 #pip install netfilterqueue
 #for Linux
+#doc: https://www.thepythoncode.com/code/make-dns-spoof-python
 from scapy.all import *
 from netfilterqueue import NetfilterQueue
 import os
