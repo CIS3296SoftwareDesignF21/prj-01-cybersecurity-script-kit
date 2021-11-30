@@ -25,8 +25,8 @@ For any cybersecurity professional, scripting is an important part of testing th
 
 ## Installation
 
-| [![](readme/downloads/csk-darwin.png)](installer/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [![](readme/downloads/csk-darwin.png)](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/releases/download/v0.0.3-beta/csk-installer.zsh) | [![](readme/downloads/csk-linux.png)](installer/csk-installer.bash) | [![](readme/downloads/csk-win.png)](installer/csk-installer.bat) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
 
 After downloading, double click the file. Done. 😀 👍
 
@@ -35,6 +35,29 @@ After downloading, double click the file. Done. 😀 👍
 Checking version and platform information: `csk -v` or `csk --version`.
 
 Getting help with usage: `csk -h` or `csk --help`.
+
+### Available Commands
+
+> The "Available Commands" are commands which can be accessed via the CLI
+
+Arguments enclosed within `(` parenthesis `)` are optional and will be prompted
+for upon execution of the script.
+
+| Commmand           | Arguments                   | Description                                                 |
+| ------------------ | --------------------------- | ----------------------------------------------------------- |
+| `version`          | none                        | Prints the `csk` shell version                              |
+| `exit`             | none                        | Exits the `csk` shell                                       |
+| `cd`               | `dir`                       | Changed the shell directory to an absolute or relative path |
+| `clone`            | `repo`                      | Pulls a git repository                                      |
+| `certifi`          | none                        | Installs the python certificate for `http-headers`          |
+| `http-headers`     | `(url)`                     | Retrieves and prints the `http(s)` headers for a given URL  |
+| `password-cracker` | none                        | Attempts to crack a password                                |
+| `sql-inject`       | none                        | Attempts to manipulate HTML forms for "SQL Injection"       |
+| `floodSYN`         | none                        | I don't know                                                |
+| `install`          | `-d` or `--deps`, `package` | Installs the dependencies required for a specific script    |
+| `keylogger`        | none                        | Keeps track of all keystrokes on the keyboard               |
+
+If another command is provided, then the command is run via the system shell program.
 
 ## Development Instructions
 
@@ -121,4 +144,19 @@ If you installed `csk` to another location, then the command looks like:
 
 Main file is CKS that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo and will install certificate.
 
-![CSK_UML](https://user-images.githubusercontent.com/44176460/140883573-433ea037-7dce-46ca-a846-f768ac414d64.png)
+![CSK_UML](https://user-images.githubusercontent.com/4074683/142000069-0cab529f-a541-466b-9952-e60c1cdf8ab1.jpg)
+
+## Sequence Diagrams
+
+Use Case 1
+
+This sequence diagram shows the user begin the csk tool by invoking the repl method. The command line interface then prompts the user to enter a command. The user enters a command, and getcmd() is called to extract the command from the user input. In this case, the user wants to run the port scanner, so after this command is extracted from the input the run() method for recon2.py script is invoked with a host or URL as a command line argument.
+
+![Sequence 1](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/fixSequence/SD1v2.png?raw=true)
+
+Use Case 2
+
+This sequence diagram shows how the user would go about running the script that gets header information. After the main function is invoked, the user is prompted to input a command. The user's input is parsed with the getcmd() command. The selected script's run() method is called with the user's selected URL. The header information is printed to the terminal.
+
+
+![Sequence 2](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/fixSequence/SD2v2.png?raw=true)

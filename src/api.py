@@ -13,8 +13,14 @@ class CLib:
         except FileNotFoundError:
             print(f"File Not Found: {path}")
 
+
+class Installer:
     @staticmethod
-    def certifi_install() -> None:
+    def pip(package: str) -> None:
+        system(f"pip3 install {package}")
+
+    @staticmethod
+    def certifi() -> None:
         if platform.system() == "Darwin":
             if os.path.isdir("/Applications/Python 3.9"):
                 system("source /Applications/Python\ 3.9/Install\ Certificates.command")
@@ -26,6 +32,15 @@ class CLib:
                 print("Python 3.7 or 3.8 or 3.9 is not installed")
         else:
             print("This feature is currently only supported on Darwin (macOS).")
+
+    @staticmethod
+    def sql_scanner_deps() -> None:
+        Installer.pip("requests")
+        Installer.pip("bs4")
+
+    @staticmethod
+    def keylogger_deps() -> None:
+        Installer.pip("keyboard")
 
 
 class Git:
