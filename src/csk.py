@@ -1,10 +1,11 @@
+import os
+import platform
+from os import getcwd, system
+from shutil import which
 from sys import argv, exit
-import platform
-from os import getcwd
+
 import getargs
-from os import system
 from api import CLib, Git, Installer, KitImportUtil
-import platform
 
 CSK_VERSION = "0.0.4"
 
@@ -52,7 +53,7 @@ def repl() -> int:
         elif cmd == "password-cracker":
             program = KitImportUtil.include("password_cracker")
             program.run()
-        elif cmd == "sql-inject":
+        elif cmd == "sql-inject":  # everything working up to here
             program = KitImportUtil.include("sql_inject")
             program.run()
         elif cmd == "floodSYN":
@@ -66,34 +67,67 @@ def repl() -> int:
                     Installer.keylogger_deps()
                 elif args[1] == "dos" or args[1] == "floodSYN":
                     Installer.dos_deps()
+                elif args[1] == "chrome":
+                    Installer.chrome_deps()
+                elif args[1] == "all":
+                    Installer.sql_scanner_deps()
+                    Installer.keylogger_deps()
+                    Installer.dos_deps()
+                    Installer.chrome_deps()
                 else:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:
                 print(f"No package found with name {args[0]}")
         elif cmd == "keylogger":
+            print("Make sure you are running this with admin privileges")
             program = KitImportUtil.include("keylogger")
             kl = program.Keylogger(
                 interval=program.SEND_REPORT_EVERY, report_method="file"
             )
             kl.start()
         elif cmd == "dos":
-            program = KitImportUtil.include("dos")
-            program.run()
+            if platform.system() != "Windows":
+                print("This implementation of DDOS is only compatible with Windows.")
+            else:
+                program = KitImportUtil.include("dos")
+                program.run()
         elif cmd == "shred":
             program = KitImportUtil.include("fileShred")
             program.run()
         elif cmd == "chrome":
-            program = KitImportUtil.include("chrome")
-            program.run()  
+            if platform.system() != "Windows":
+                print("Chrome is only available on Windows")
+            else:
+                program = KitImportUtil.include("chrome")
+                program.main()
         elif cmd == "n-scanner":
-            program = KitImportUtil.include("scanner")
-            program.run()
+            if platform.system() != "Windows" or platform.system() != "Linux":
+                print("Nmap is only available on Windows and Linux")
+            else:
+                program = KitImportUtil.include("scanner")
+            # program.run()
         elif cmd == "wifi-pw":
-            program = KitImportUtil.include("wifiPW")
-            program.run()            
-                                           
-                                 
-            
+            if platform.system() != "Windows":
+                print("WiFi password is only available on Windows")
+            else:
+                program = KitImportUtil.include("wifiPW")
+            # program.run()
+        elif cmd == "arpspoof":
+            if platform != "Linux":
+                print("Arpspoof is only available on Linux")
+            else:
+                program = KitImportUtil.include("arpspoof")
+                if len(args) == 0:
+                    program.run(
+                        input("Enter the target IP: "), input("Enter the gateway IP: ")
+                    )
+                elif len(args) == 1:
+                    program.run(args[0], input("Enter the gateway IP: "))
+                else:
+                    program.run(args[0], args[1])
+        elif cmd == "change-mac":
+            program = KitImportUtil.include("changeMac")
+            program.main()
         else:
             system(prompt_input)
 

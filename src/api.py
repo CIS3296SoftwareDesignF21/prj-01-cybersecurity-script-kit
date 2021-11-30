@@ -46,6 +46,10 @@ class Installer:
     def dos_deps() -> None:
         Installer.pip("scapy")
 
+    def chrome_deps() -> None:
+        Installer.pip("pycryptodome")
+        Installer.pip("pypiwin32")
+
 
 class Git:
     @staticmethod
@@ -69,7 +73,8 @@ class KitImportUtil:
         "fileShred",
         "chrome",
         "scanner",
-        "wifiPW"
+        "wifiPW",
+        "changeMac",
     ]
 
     @staticmethod
@@ -108,14 +113,22 @@ class KitImportUtil:
             elif name == "chrome":
                 from kit import chrome
 
-                return chrome  
+                return chrome
             elif name == "scanner":
                 from kit import scanner
 
-                return scanner  
-            elif name == "wifi-pw":
+                return scanner
+            elif name == "wifiPW":
                 from kit import wifiPW
 
-                return wifiPW            
+                return wifiPW
+            elif name == "arpspoof":
+                from kit import arpspoof
+
+                return arpspoof
+            elif name == "changeMac":
+                from kit import changeMac
+
+                return changeMac
             else:
                 print("Error: KitImportUtil.include()")
