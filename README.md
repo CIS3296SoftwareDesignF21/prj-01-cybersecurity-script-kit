@@ -19,7 +19,7 @@ For any cybersecurity professional, scripting is an important part of testing th
 | 👁   | [Vision](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Personas%2B.md)            |
 | 💁  | [The Four Personas](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Personas%2B.md) |
 | 📊  | [UML Diagram](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/UML.md)               |
-| 🧐 | [Issues and Resolutions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/UML.md)               |
+| 🧐 | [Issues and Resolutions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/Chrome/markdowns/issues.md)               |
 
 
 
