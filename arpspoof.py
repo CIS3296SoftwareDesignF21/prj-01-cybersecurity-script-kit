@@ -1,5 +1,9 @@
 import scapy.all as scapy
 import time
+
+#for Linux
+#pip install scapy
+#doc: https://www.geeksforgeeks.org/python-how-to-create-an-arp-spoofer-using-scapy/
   
 def get_mac(ip):
     arp_request = scapy.ARP(pdst = ip)
