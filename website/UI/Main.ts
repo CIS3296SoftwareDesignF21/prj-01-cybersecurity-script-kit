@@ -35,18 +35,94 @@ class NavigationPanel extends HStack {
         }
 
         super(
-            new ClickButton(homeText).padding(5).padding({ left: 10, right: 10 }).font('md'),
-            new ClickButton(killchainText).padding(5).padding({ left: 10, right: 10 }).font('md'),
+            new ClickButton(homeText)
+                .padding(5)
+                .padding({ left: 10, right: 10 })
+                .font('md')
+                .whenClicked(() =>
+                    ViewController.getController('ContentController')!.navigateTo(new HomePage())
+                ),
+
+            new ClickButton(killchainText)
+                .padding(5)
+                .padding({ left: 10, right: 10 })
+                .font('md')
+                .whenClicked(() =>
+                    ViewController.getController('ContentController')!.navigateTo(
+                        new KillchainPage()
+                    )
+                ),
+
             new Spacer()
         );
+
         this.borderBottom({ size: 1, color: HColor('gray4'), style: 'solid' }).width('100%');
+    }
+}
+
+class KillchainPage extends VStack {
+    constructor() {
+        super(
+            new NavigationPanel('Killchain'),
+
+            new ScrollView(
+                new VStack(
+                    new WebsitePanel(
+                        new IonIcon('shield')
+                            .font(50)
+                            .margin({ bottom: 25 })
+                            .foreground(HColor('green')),
+
+                        new TextView('The Cyber Killchain').font(50),
+
+                        new TextView(
+                            'The Cyber Killchain is a series of events that occur in the course of a cyber attack. The events are categorized into three categories: Information, Intrusion, and Exploitation.'
+                        )
+                            .width({
+                                min: 500,
+                                max: 800,
+                                default: '75%',
+                            })
+                            .font('lg')
+                            .padding()
+                            .lineHeight('150%')
+                    ),
+
+                    new WebsitePanel(
+                        new ImageView(
+                            'https://blogvaronis2.wpengine.com/wp-content/uploads/2016/06/cyber-kill-chain-phases-2@2x.png'
+                        ).width('100%'),
+                        new ImageView(
+                            'https://blogvaronis2.wpengine.com/wp-content/uploads/2016/06/KC-bgadd.png'
+                        ).width('100%'),
+                        new HStack(
+                            new Spacer(),
+                            new TextView('Images sourced from: ').font('md'),
+                            new ClickButton(
+                                new TextView('https://www.varonis.com/blog/cyber-kill-chain/')
+                            )
+                                .padding(5)
+                                .whenClicked(() => {
+                                    window.open(
+                                        'https://www.varonis.com/blog/cyber-kill-chain/',
+                                        '_blank'
+                                    );
+                                })
+                                .font('md')
+                        )
+                            .width('100%')
+                            .padding()
+                    )
+                )
+            ).stretch()
+        );
     }
 }
 
 class HomePage extends VStack {
     constructor() {
         super(
-            new NavigationPanel('home'),
+            new NavigationPanel('Home'),
 
             new ScrollView(
                 new VStack(
@@ -150,7 +226,13 @@ class SiteWrapper extends HIFullScreenView {
             .navigateTo(new HomePage());
     }
 
-    public navigateToCyberKillchain() {}
+    public navigateToHome(): void {
+        this.contentController.navigateTo(new HomePage());
+    }
+
+    public navigateToCyberKillchain(): void {
+        this.contentController.navigateTo(new KillchainPage());
+    }
 }
 
 const controller = new ViewController('AppController');
