@@ -6,3 +6,4 @@ node_modules
 website/Server/js
 website/Server/static/js/bundle.js
 website/Server/static/js/bundle.js.map
+.DS_Store
