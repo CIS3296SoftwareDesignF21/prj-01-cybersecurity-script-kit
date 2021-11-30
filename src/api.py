@@ -42,6 +42,10 @@ class Installer:
     def keylogger_deps() -> None:
         Installer.pip("keyboard")
 
+    @staticmethod
+    def dos_deps() -> None:
+        Installer.pip("scapy")
+
 
 class Git:
     @staticmethod
@@ -52,3 +56,51 @@ class Git:
     @staticmethod
     def clone(url) -> None:
         system(f"git clone https://github.com/{url} {Git.repo_dir()}")
+
+
+class KitImportUtil:
+    ALLOWED_IMPORTS = [
+        "http_headers",
+        "password_cracker",
+        "sql_inject",
+        "floodSYN",
+        "keylogger",
+        "dos",
+        "fileShred",
+    ]
+
+    @staticmethod
+    def include(name: str):
+        if name not in KitImportUtil.ALLOWED_IMPORTS:
+            print(f"Cannot import script from kit {name}")
+        else:
+            if name == "http_headers":
+                from kit import http_headers
+
+                return http_headers
+            elif name == "password_cracker":
+                from kit import password_cracker
+
+                return password_cracker
+            elif name == "sql_inject":
+                from kit import sql_inject
+
+                return sql_inject
+            elif name == "floodSYN":
+                from kit import floodSYN
+
+                return floodSYN
+            elif name == "keylogger":
+                from kit import keylogger
+
+                return keylogger
+            elif name == "dos":
+                from kit import dos
+
+                return dos
+            elif name == "fileShred":
+                from kit import fileShred
+
+                return fileShred
+            else:
+                print("Error: KitImportUtil.include()")

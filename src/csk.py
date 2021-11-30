@@ -3,9 +3,10 @@ import platform
 from os import getcwd
 import getargs
 from os import system
-from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger
+from api import CLib, Git, Installer, KitImportUtil
 import platform
+
+CSK_VERSION = "0.0.4"
 
 
 def print_art() -> None:
@@ -26,7 +27,7 @@ def prompt() -> str:
 
 def repl() -> int:
     print_art()
-    print(f"CSK v0.0.4 – {platform.system()}")
+    print(f"CSK v{CSK_VERSION} – {platform.system()}")
     while True:
         prompt_input = prompt()  # Get the input from the prompt
         cmd = getargs.getcmd(prompt_input)  # Extract the command from the input
@@ -37,7 +38,7 @@ def repl() -> int:
         if cmd == "exit":
             exit(0)
         elif cmd == "version":
-            print("0.0.1-alpha")
+            print(f"CSK v{CSK_VERSION}")
         elif cmd == "cd":
             CLib.cd(args[0])
         elif cmd == "clone":
@@ -45,28 +46,41 @@ def repl() -> int:
         elif cmd == "certifi":  # Installs certificates via Certifi
             Installer.certifi()
         elif cmd == "http-headers":
-            http_headers.run(args[0] if len(args) > 0 else input("URL: "))
+            program = KitImportUtil.include("http_headers")
+            program.run(args[0] if len(args) > 0 else input("URL: "))
         elif cmd == "password-cracker":
-            password_cracker.run()
+            program = KitImportUtil.include("password_cracker")
+            program.run()
         elif cmd == "sql-inject":
-            sql_inject.run()
+            program = KitImportUtil.include("sql_inject")
+            program.run()
         elif cmd == "floodSYN":
-            floodSYN.run()
+            program = KitImportUtil.include("floodSYN")
+            program.run()
         elif cmd == "install":
             if args[0] == "--deps" or args[0] == "-d":
                 if args[1] == "sql-scanner":
                     Installer.sql_scanner_deps()
                 elif args[1] == "keylogger":
                     Installer.keylogger_deps()
+                elif args[1] == "dos" or args[1] == "floodSYN":
+                    Installer.dos_deps()
                 else:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:
                 print(f"No package found with name {args[0]}")
         elif cmd == "keylogger":
-            kl = keylogger.Keylogger(
-                interval=keylogger.SEND_REPORT_EVERY, report_method="file"
+            program = KitImportUtil.include("keylogger")
+            kl = program.Keylogger(
+                interval=program.SEND_REPORT_EVERY, report_method="file"
             )
             kl.start()
+        elif cmd == "dos":
+            program = KitImportUtil.include("dos")
+            program.run()
+        elif cmd == "shred":
+            program = KitImportUtil.include("fileShred")
+            program.run()
         else:
             system(prompt_input)
 
