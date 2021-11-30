@@ -4,7 +4,7 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger
+from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger, dos, fileShred
 import platform
 
 CSK_VERSION = "0.0.4"
@@ -69,6 +69,10 @@ def repl() -> int:
                 interval=keylogger.SEND_REPORT_EVERY, report_method="file"
             )
             kl.start()
+        elif cmd == "dos":
+            dos.run()
+        elif cmd == "shred":
+            fileShred.run()
         else:
             system(prompt_input)
 
