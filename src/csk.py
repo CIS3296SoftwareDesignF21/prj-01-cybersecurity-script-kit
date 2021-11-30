@@ -67,6 +67,13 @@ def repl() -> int:
                     Installer.keylogger_deps()
                 elif args[1] == "dos" or args[1] == "floodSYN":
                     Installer.dos_deps()
+                elif args[1] == "chrome":
+                    Installer.chrome_deps()
+                elif args[1] == "all":
+                    Installer.sql_scanner_deps()
+                    Installer.keylogger_deps()
+                    Installer.dos_deps()
+                    Installer.chrome_deps()
                 else:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:

@@ -46,6 +46,10 @@ class Installer:
     def dos_deps() -> None:
         Installer.pip("scapy")
 
+    def chrome_deps() -> None:
+        Installer.pip("pycryptodome")
+        Installer.pip("pypiwin32")
+
 
 class Git:
     @staticmethod
