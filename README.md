@@ -36,6 +36,29 @@ Checking version and platform information: `csk -v` or `csk --version`.
 
 Getting help with usage: `csk -h` or `csk --help`.
 
+### Available Commands
+
+> The "Available Commands" are commands which can be accessed via the CLI
+
+Arguments enclosed within `(` parenthesis `)` are optional and will be prompted
+for upon execution of the script.
+
+| Commmand           | Arguments                   | Description                                                 |
+| ------------------ | --------------------------- | ----------------------------------------------------------- |
+| `version`          | none                        | Prints the `csk` shell version                              |
+| `exit`             | none                        | Exits the `csk` shell                                       |
+| `cd`               | `dir`                       | Changed the shell directory to an absolute or relative path |
+| `clone`            | `repo`                      | Pulls a git repository                                      |
+| `certifi`          | none                        | Installs the python certificate for `http-headers`          |
+| `http-headers`     | `(url)`                     | Retrieves and prints the `http(s)` headers for a given URL  |
+| `password-cracker` | none                        | Attempts to crack a password                                |
+| `sql-inject`       | none                        | Attempts to manipulate HTML forms for "SQL Injection"       |
+| `floodSYN`         | none                        | I don't know                                                |
+| `install`          | `-d` or `--deps`, `package` | Installs the dependencies required for a specific script    |
+| `keylogger`        | none                        | Keeps track of all keystrokes on the keyboard               |
+
+If another command is provided, then the command is run via the system shell program.
+
 ## Development Instructions
 
 When running the program to test if production-ready or to install the program,
@@ -136,4 +159,3 @@ Use Case 2
 This sequence diagram shows how the user would go about running the script that gets header information. After the main function is invoked, the user is prompted to input a command. The user's input is parsed with the getcmd() command. The selected script's run() method is called with the user's selected URL. The header information is printed to the terminal.
 
 ![CSK](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/sd2.png?raw=true)
-
