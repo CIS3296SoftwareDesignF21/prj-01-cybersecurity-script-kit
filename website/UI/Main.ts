@@ -6,10 +6,18 @@ import TextView from '@Hi/Components/TextView';
 import VStack from '@Hi/Components/VStack';
 import IonIcon from '@Hi/Components/IonIcon';
 import { ViewController } from '@Hi/ViewController';
-import { HColor } from '@Hi/Colors';
+import { HColor, rgb } from '@Hi/Colors';
 import ScrollView from '@Hi/Components/ScrollView';
 import Resources from '@Hi/Resources';
 import ImageView from '@Hi/Components/ImageView';
+import View from '@Hi/View';
+
+class WebsitePanel extends VStack {
+    constructor(...children: View[]) {
+        super(...children);
+        this.margin({ bottom: 50, top: 50 });
+    }
+}
 
 class HomePage extends HIFullScreenView {
     constructor() {
@@ -58,7 +66,55 @@ class HomePage extends HIFullScreenView {
                     new VStack(
                         new ImageView('/img/splash.png', 'Splash Image')
                             .width('100%')
-                            .background(HColor('gray'))
+                            .background(HColor('gray')),
+
+                        new WebsitePanel(
+                            new IonIcon('help').font(50).margin({ bottom: 25 }),
+
+                            new TextView('What is CSK?').font(50),
+
+                            new TextView(
+                                'CSK is a set of tools and libraries for cyber security. You get out-of-the-box features, such as sniffing HTTP requests, accessing HTTP headers, a keylogger, and more! CSK comes packaged as a shell which can be run in the Mac/Linux terminal environments (bash/zsh) along with Windows PowerShell.'
+                            )
+                                .width({
+                                    min: 500,
+                                    max: 800,
+                                    default: '75%',
+                                })
+                                .font('lg')
+                                .padding()
+                                .lineHeight('150%')
+                        ),
+
+                        new WebsitePanel(
+                            new IonIcon('download-outline').font(50).margin({ bottom: 25 }),
+
+                            new TextView('Download and Installation').font(50),
+
+                            new TextView(
+                                "We tried making this process as simple as possible. You can access each of our releases via GitHub. Prior to installation, please make sure you have Python 3.7+ installed, along with pip (Python's package manager), and pyinstaller."
+                            )
+                                .width({
+                                    min: 500,
+                                    max: 800,
+                                    default: '75%',
+                                })
+                                .font('lg')
+                                .padding()
+                                .lineHeight('150%'),
+
+                            new ClickButton(
+                                new HStack(
+                                    new IonIcon('cloud-download-outline'),
+                                    new TextView('Download').margin({ left: 10 })
+                                )
+                            )
+                                .font('lg')
+                                .background(HColor('gray'))
+                                .foreground(rgb(255, 255, 255))
+                                .padding()
+                                .rounded()
+                        )
                     ).stretch()
                 ).stretch()
             )
