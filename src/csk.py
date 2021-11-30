@@ -7,7 +7,7 @@ from sys import argv, exit
 import getargs
 from api import CLib, Git, Installer, KitImportUtil
 
-CSK_VERSION = "0.0.5"
+CSK_VERSION = "0.0.4"
 
 
 def print_art() -> None:
