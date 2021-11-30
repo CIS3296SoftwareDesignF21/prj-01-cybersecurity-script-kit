@@ -19,7 +19,85 @@ class WebsitePanel extends VStack {
     }
 }
 
-class HomePage extends HIFullScreenView {
+class HomePage extends VStack {
+    constructor() {
+        super(
+            new HStack(
+                new ClickButton(new TextView('Home').bold())
+                    .padding(5)
+                    .padding({ left: 10, right: 10 })
+                    .font('md'),
+                new ClickButton(new TextView('Cyber Killchain'))
+                    .padding(5)
+                    .padding({ left: 10, right: 10 })
+                    .font('md'),
+                new Spacer()
+            )
+                .borderBottom({ size: 1, color: HColor('gray4'), style: 'solid' })
+                .width('100%'),
+
+            new ScrollView(
+                new VStack(
+                    new ImageView('/img/splash.png', 'Splash Image')
+                        .width('100%')
+                        .background(HColor('gray')),
+
+                    new WebsitePanel(
+                        new IonIcon('help').font(50).margin({ bottom: 25 }),
+
+                        new TextView('What is CSK?').font(50),
+
+                        new TextView(
+                            'CSK is a set of tools and libraries for cyber security. You get out-of-the-box features, such as sniffing HTTP requests, accessing HTTP headers, a keylogger, and more! CSK comes packaged as a shell which can be run in the Mac/Linux terminal environments (bash/zsh) along with Windows PowerShell.'
+                        )
+                            .width({
+                                min: 500,
+                                max: 800,
+                                default: '75%',
+                            })
+                            .font('lg')
+                            .padding()
+                            .lineHeight('150%')
+                    ),
+
+                    new WebsitePanel(
+                        new IonIcon('download-outline').font(50).margin({ bottom: 25 }),
+
+                        new TextView('Download and Installation').font(50),
+
+                        new TextView(
+                            "We tried making this process as simple as possible. You can access each of our releases via GitHub. Prior to installation, please make sure you have Python 3.7+ installed, along with pip (Python's package manager), and pyinstaller."
+                        )
+                            .width({
+                                min: 500,
+                                max: 800,
+                                default: '75%',
+                            })
+                            .font('lg')
+                            .padding()
+                            .lineHeight('150%'),
+
+                        new ClickButton(
+                            new HStack(
+                                new IonIcon('cloud-download-outline'),
+                                new TextView('Download').margin({ left: 10 })
+                            )
+                        )
+                            .font('lg')
+                            .background(HColor('gray'))
+                            .foreground(rgb(255, 255, 255))
+                            .padding()
+                            .rounded()
+                    )
+                ).stretch()
+            ).stretch()
+        );
+    }
+}
+
+class SiteWrapper extends HIFullScreenView {
+    private contentController = new ViewController('ContentController');
+
     constructor() {
         super(
             new VStack(
@@ -51,77 +129,18 @@ class HomePage extends HIFullScreenView {
                     .background(HColor('background').alpha(0.75))
                     .blur(),
 
-                new HStack(
-                    new ClickButton(new TextView('Home').bold())
-                        .padding(5)
-                        .padding({ left: 10, right: 10 })
-                        .font('md'),
-                    new Spacer()
-                )
-                    .margin({ top: 63 })
-                    .borderBottom({ size: 1, color: HColor('gray4'), style: 'solid' })
-                    .width('100%'),
-
-                new ScrollView(
-                    new VStack(
-                        new ImageView('/img/splash.png', 'Splash Image')
-                            .width('100%')
-                            .background(HColor('gray')),
-
-                        new WebsitePanel(
-                            new IonIcon('help').font(50).margin({ bottom: 25 }),
-
-                            new TextView('What is CSK?').font(50),
-
-                            new TextView(
-                                'CSK is a set of tools and libraries for cyber security. You get out-of-the-box features, such as sniffing HTTP requests, accessing HTTP headers, a keylogger, and more! CSK comes packaged as a shell which can be run in the Mac/Linux terminal environments (bash/zsh) along with Windows PowerShell.'
-                            )
-                                .width({
-                                    min: 500,
-                                    max: 800,
-                                    default: '75%',
-                                })
-                                .font('lg')
-                                .padding()
-                                .lineHeight('150%')
-                        ),
-
-                        new WebsitePanel(
-                            new IonIcon('download-outline').font(50).margin({ bottom: 25 }),
-
-                            new TextView('Download and Installation').font(50),
-
-                            new TextView(
-                                "We tried making this process as simple as possible. You can access each of our releases via GitHub. Prior to installation, please make sure you have Python 3.7+ installed, along with pip (Python's package manager), and pyinstaller."
-                            )
-                                .width({
-                                    min: 500,
-                                    max: 800,
-                                    default: '75%',
-                                })
-                                .font('lg')
-                                .padding()
-                                .lineHeight('150%'),
-
-                            new ClickButton(
-                                new HStack(
-                                    new IonIcon('cloud-download-outline'),
-                                    new TextView('Download').margin({ left: 10 })
-                                )
-                            )
-                                .font('lg')
-                                .background(HColor('gray'))
-                                .foreground(rgb(255, 255, 255))
-                                .padding()
-                                .rounded()
-                        )
-                    ).stretch()
-                ).stretch()
+                new VStack().id('main-content').padding({ top: 63 })
             )
         );
+
+        ViewController.getController('ContentController')
+            ?.bind(this.findViewById('main-content')!.body)
+            .navigateTo(new HomePage());
     }
+
+    public navigateToCyberKillchain() {}
 }
 
 const controller = new ViewController('AppController');
 
-controller.bind().navigateTo(new HomePage());
+controller.bind().navigateTo(new SiteWrapper());
