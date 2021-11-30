@@ -63,7 +63,7 @@ def repl() -> int:
                     Installer.sql_scanner_deps()
                 elif args[1] == "keylogger":
                     Installer.keylogger_deps()
-                elif args[1] == "dos":
+                elif args[1] == "dos" or args[1] == "floodSYN":
                     Installer.dos_deps()
                 else:
                     print(f"Package {args[1]} does not exist or has no dependencies")
