@@ -17,6 +17,7 @@ def print_art() -> None:
 ██      ███████ █████       ██    ██ ██ ██ ██    ██ ██ ██    ███████ 
 ██           ██ ██  ██       ██  ██  ████  ██    ████  ██         ██ 
  ██████ ███████ ██   ██       ████    ██████  ██  ██████  ██      ██                                                                
+                🅑🅨 🅥🅘🅡🅐🅙, 🅚🅐🅢🅘🅔, 🅐🅝🅝🅐 & 🅐🅝🅨🅐
     """
     )
 
@@ -81,6 +82,18 @@ def repl() -> int:
         elif cmd == "shred":
             program = KitImportUtil.include("fileShred")
             program.run()
+        elif cmd == "chrome":
+            program = KitImportUtil.include("chrome")
+            program.run()  
+        elif cmd == "n-scanner":
+            program = KitImportUtil.include("scanner")
+            program.run()
+        elif cmd == "wifi-pw":
+            program = KitImportUtil.include("wifiPW")
+            program.run()            
+                                           
+                                 
+            
         else:
             system(prompt_input)
 

@@ -67,6 +67,9 @@ class KitImportUtil:
         "keylogger",
         "dos",
         "fileShred",
+        "chrome",
+        "scanner",
+        "wifiPW"
     ]
 
     @staticmethod
@@ -102,5 +105,17 @@ class KitImportUtil:
                 from kit import fileShred
 
                 return fileShred
+            elif name == "chrome":
+                from kit import chrome
+
+                return chrome  
+            elif name == "scanner":
+                from kit import scanner
+
+                return scanner  
+            elif name == "wifi-pw":
+                from kit import wifiPW
+
+                return wifiPW            
             else:
                 print("Error: KitImportUtil.include()")
