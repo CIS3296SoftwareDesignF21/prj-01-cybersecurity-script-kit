@@ -19,22 +19,34 @@ class WebsitePanel extends VStack {
     }
 }
 
+class NavigationPanel extends HStack {
+    constructor(activeNav: string) {
+        activeNav = activeNav.toLowerCase();
+        const homeText = new TextView('Home');
+        const killchainText = new TextView('Cyber Killchain');
+
+        switch (activeNav) {
+            case 'home':
+                homeText.bold();
+                break;
+            case 'killchain':
+                killchainText.bold();
+                break;
+        }
+
+        super(
+            new ClickButton(homeText).padding(5).padding({ left: 10, right: 10 }).font('md'),
+            new ClickButton(killchainText).padding(5).padding({ left: 10, right: 10 }).font('md'),
+            new Spacer()
+        );
+        this.borderBottom({ size: 1, color: HColor('gray4'), style: 'solid' }).width('100%');
+    }
+}
+
 class HomePage extends VStack {
     constructor() {
         super(
-            new HStack(
-                new ClickButton(new TextView('Home').bold())
-                    .padding(5)
-                    .padding({ left: 10, right: 10 })
-                    .font('md'),
-                new ClickButton(new TextView('Cyber Killchain'))
-                    .padding(5)
-                    .padding({ left: 10, right: 10 })
-                    .font('md'),
-                new Spacer()
-            )
-                .borderBottom({ size: 1, color: HColor('gray4'), style: 'solid' })
-                .width('100%'),
+            new NavigationPanel('home'),
 
             new ScrollView(
                 new VStack(
