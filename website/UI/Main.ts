@@ -176,6 +176,12 @@ class HomePage extends VStack {
                             .foreground(rgb(255, 255, 255))
                             .padding()
                             .rounded()
+                            .whenClicked(() => {
+                                window.open(
+                                    'https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/releases',
+                                    '_blank'
+                                );
+                            })
                     )
                 ).stretch()
             ).stretch()
