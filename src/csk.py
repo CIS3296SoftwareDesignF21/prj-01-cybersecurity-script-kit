@@ -7,7 +7,7 @@ from sys import argv, exit
 import getargs
 from api import CLib, Git, Installer, KitImportUtil
 
-CSK_VERSION = "0.0.4"
+CSK_VERSION = "0.0.5"
 
 
 def print_art() -> None:
@@ -85,13 +85,13 @@ def repl() -> int:
             program.run()
         elif cmd == "chrome":
             program = KitImportUtil.include("chrome")
-            program.run()
+            program.main()
         elif cmd == "n-scanner":
             program = KitImportUtil.include("scanner")
-            program.run()
+            # program.run()
         elif cmd == "wifi-pw":
             program = KitImportUtil.include("wifiPW")
-            program.run()
+            # program.run()
         elif cmd == "arpspoof":
             program = KitImportUtil.include("arpspoof")
             if len(args) == 0:
