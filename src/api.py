@@ -69,7 +69,7 @@ class KitImportUtil:
         "fileShred",
         "chrome",
         "scanner",
-        "wifiPW"
+        "wifiPW",
     ]
 
     @staticmethod
@@ -108,14 +108,18 @@ class KitImportUtil:
             elif name == "chrome":
                 from kit import chrome
 
-                return chrome  
+                return chrome
             elif name == "scanner":
                 from kit import scanner
 
-                return scanner  
+                return scanner
             elif name == "wifi-pw":
                 from kit import wifiPW
 
-                return wifiPW            
+                return wifiPW
+            elif name == "arpspoof":
+                from kit import arpspoof
+
+                return arpspoof
             else:
                 print("Error: KitImportUtil.include()")
