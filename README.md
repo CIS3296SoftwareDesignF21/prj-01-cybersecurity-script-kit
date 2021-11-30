@@ -1,12 +1,12 @@
 # _Final Project: Cybersecurity Script Kit_
 
 &nbsp; 🔷 &nbsp;
-[Week One Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week1.md)
+[Week One Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week1.md)
 &nbsp; 🔷 &nbsp;
-[Week Two Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week2.md)
+[Week Two Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week2.md)
 &nbsp; 🔷 &nbsp;
-[Week Three Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/Week3.md)
-&nbsp; 🔷 &nbsp; [Week Four Contributions]()
+[Week Three Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week3.md)
+&nbsp; 🔷 &nbsp; [Week Four Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/week4.md)
 
 For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. This command line tool encompasses the entire Cyber Kill chain developed by Lockheed martin. 
 
@@ -14,11 +14,11 @@ For any cybersecurity professional, scripting is an important part of testing th
 | --- | ----------------------------------------------------- |
 | 🛠   | [Installation](#installation)                         |
 | 🥷   | [Usage](#usage)                                       |
-| 👨‍💻  | [Development Instructions](#development-instructions) |
+| 👨‍💻  | [Development Instructions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/devInstruc.md) |
 | ⬆️  | [Updates and Changes](#updates-and-changes)           |
-| 👁   | [Vision](#vision)                                     |
-| 💁  | [The Four Personas](#the-four-personas)               |
-| 📊  | [UML Diagram](#uml-diagram)                           |
+| 👁   | [Vision](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Personas%2B.md)            |
+| 💁  | [The Four Personas](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Personas%2B.md) |
+| 📊  | [UML Diagram](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/UML.md)               |
 
 
 
