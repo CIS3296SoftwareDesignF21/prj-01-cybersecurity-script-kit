@@ -1,4 +1,7 @@
 #simple script for delivery using DNS spoof
+#pip install scapy
+#pip install netfilterqueue
+#for Linux
 from scapy.all import *
 from netfilterqueue import NetfilterQueue
 import os
