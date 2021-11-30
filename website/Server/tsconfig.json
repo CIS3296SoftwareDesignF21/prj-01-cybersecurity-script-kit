@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "lib": ["esnext"],
+        "rootDir": "./ts",
+        "outDir": "./js",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "target": "es6",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {},
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["./node_modules", "./out", "./**/*.spec.ts", "./**/*.mock.ts"]
+}
