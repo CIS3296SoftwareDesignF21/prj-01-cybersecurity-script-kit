@@ -61,6 +61,7 @@ for upon execution of the script.
 | `keylogger`        | none                        | Keeps track of all keystrokes on the keyboard               |
 | `Extract Chrome Passwords`        | none                        | Extracts and decrypts Google Chrome passwords              |
 | `Network Scanner`        | none                        | Scans the inputed IP address for devices on that network              |
+| `Wifi Password Stealer`        | none                        | Pulles known wifi network and their passwords              |
 
 If another command is provided, then the command is run via the system shell program.
 
