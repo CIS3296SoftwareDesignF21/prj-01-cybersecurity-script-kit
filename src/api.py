@@ -42,6 +42,10 @@ class Installer:
     def keylogger_deps() -> None:
         Installer.pip("keyboard")
 
+    @staticmethod
+    def dos_deps() -> None:
+        Installer.pip("scapy")
+
 
 class Git:
     @staticmethod
