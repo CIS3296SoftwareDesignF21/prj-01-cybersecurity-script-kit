@@ -1,5 +1,3 @@
-import { HColor } from '@Hi/Colors';
-import HStack from '@Hi/Components/HStack';
 import ImageView from '@Hi/Components/ImageView';
 import IonIcon from '@Hi/Components/IonIcon';
 import ScrollView from '@Hi/Components/ScrollView';

@@ -4,6 +4,7 @@ import HStack from '@Hi/Components/HStack';
 import Spacer from '@Hi/Components/Spacer';
 import TextView from '@Hi/Components/TextView';
 import { ViewController } from '@Hi/ViewController';
+import DownloadsPage from './DownloadsPage';
 import HomePage from './HomePage';
 import KillchainPage from './KillchainPage';
 import ScreenshotsPage from './ScreenshotsPage';
@@ -22,16 +23,20 @@ export default class NavigationPanel extends HStack {
         activeNav = activeNav.toLowerCase();
 
         super(
-            new NavigationButton('Home', activeNav === 'Home').whenClicked(() =>
+            new NavigationButton('Home', activeNav === 'home').whenClicked(() =>
                 ViewController.getController('ContentController')!.navigateTo(new HomePage())
             ),
 
-            new NavigationButton('Cyber Killchain', activeNav === 'Killchain').whenClicked(() =>
+            new NavigationButton('Cyber Killchain', activeNav === 'killchain').whenClicked(() =>
                 ViewController.getController('ContentController')!.navigateTo(new KillchainPage())
             ),
 
-            new NavigationButton('Screenshots', activeNav === 'Screenshots').whenClicked(() =>
+            new NavigationButton('Screenshots', activeNav === 'screenshots').whenClicked(() =>
                 ViewController.getController('ContentController')!.navigateTo(new ScreenshotsPage())
+            ),
+
+            new NavigationButton('Downloads', activeNav === 'downloads').whenClicked(() =>
+                ViewController.getController('ContentController')!.navigateTo(new DownloadsPage())
             ),
 
             new Spacer()
