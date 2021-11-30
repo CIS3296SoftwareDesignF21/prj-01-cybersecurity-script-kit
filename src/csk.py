@@ -79,6 +79,7 @@ def repl() -> int:
             else:
                 print(f"No package found with name {args[0]}")
         elif cmd == "keylogger":
+            print("Make sure you are running this with admin privileges")
             program = KitImportUtil.include("keylogger")
             kl = program.Keylogger(
                 interval=program.SEND_REPORT_EVERY, report_method="file"
@@ -91,28 +92,39 @@ def repl() -> int:
             program = KitImportUtil.include("fileShred")
             program.run()
         elif cmd == "chrome":
-            program = KitImportUtil.include("chrome")
-            program.main()
+            if platform.system() != "Windows":
+                print("Chrome is only available on Windows")
+            else:
+                program = KitImportUtil.include("chrome")
+                program.main()
         elif cmd == "n-scanner":
-            program = KitImportUtil.include("scanner")
+            if platform.system() != "Windows" or platform.system() != "Linux":
+                print("Nmap is only available on Windows and Linux")
+            else:
+                program = KitImportUtil.include("scanner")
             # program.run()
         elif cmd == "wifi-pw":
-            program = KitImportUtil.include("wifiPW")
+            if platform.system() != "Windows":
+                print("WiFi password is only available on Windows")
+            else:
+                program = KitImportUtil.include("wifiPW")
             # program.run()
         elif cmd == "arpspoof":
-            program = KitImportUtil.include("arpspoof")
-            if len(args) == 0:
-                program.run(
-                    input("Enter the target IP: "), input("Enter the gateway IP: ")
-                )
-            elif len(args) == 1:
-                program.run(args[0], input("Enter the gateway IP: "))
+            if platform != "Linux":
+                print("Arpspoof is only available on Linux")
             else:
-                program.run(args[0], args[1])
+                program = KitImportUtil.include("arpspoof")
+                if len(args) == 0:
+                    program.run(
+                        input("Enter the target IP: "), input("Enter the gateway IP: ")
+                    )
+                elif len(args) == 1:
+                    program.run(args[0], input("Enter the gateway IP: "))
+                else:
+                    program.run(args[0], args[1])
         elif cmd == "change-mac":
-            args_str = " ".join(args)
-            python_cmd = "python3" if which("python3") is not None else "python"
-            system(f"{python_cmd} {os.path.realpath()}/kit/changeMac.py {args_str}")
+            program = KitImportUtil.include("changeMac")
+            program.main()
         else:
             system(prompt_input)
 

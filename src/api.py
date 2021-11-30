@@ -74,6 +74,7 @@ class KitImportUtil:
         "chrome",
         "scanner",
         "wifiPW",
+        "changeMac",
     ]
 
     @staticmethod
@@ -117,7 +118,7 @@ class KitImportUtil:
                 from kit import scanner
 
                 return scanner
-            elif name == "wifi-pw":
+            elif name == "wifiPW":
                 from kit import wifiPW
 
                 return wifiPW
@@ -125,5 +126,9 @@ class KitImportUtil:
                 from kit import arpspoof
 
                 return arpspoof
+            elif name == "changeMac":
+                from kit import changeMac
+
+                return changeMac
             else:
                 print("Error: KitImportUtil.include()")
