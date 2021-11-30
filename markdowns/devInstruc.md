@@ -1,6 +1,3 @@
-
-# Development Instructions
-
 When running the program to test if production-ready or to install the program,
 the native method is suggested.
 
