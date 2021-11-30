@@ -1,7 +1,7 @@
 
 # UML Diagram
 
-Main file is CKS that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo and will install certificate.
+Main file is CSK that the user will invoke to run the program. If there are no args it will then run the repl.py file that will runs bash commands from within the API. This will make it easier to install the repo. It will install the certificate and any required dependencies to run the code.
 
 ![CSK_UML](https://user-images.githubusercontent.com/4074683/142000069-0cab529f-a541-466b-9952-e60c1cdf8ab1.jpg)
 

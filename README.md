@@ -8,12 +8,11 @@
 [Week Three Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week3.md)
 &nbsp; 🔷 &nbsp; [Week Four Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/week4.md)
 
-For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. This command line tool encompasses the entire Cyber Kill chain developed by Lockheed martin. 
-
+ _For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. This command line tool encompasses the entire Cyber Kill chain developed by Lockheed martin and is every pen-testers secrect weopon!_
 |     | Table of Contents                                     |
 | --- | ----------------------------------------------------- |
 | 🛠   | [Installation](#installation)                         |
-| 🥷   | [Usage](#usage)                                       |
+| 🧠   | [Usage](#usage)                                       |
 | 👨‍💻  | [Development Instructions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/devInstruc.md) |
 | ⬆️  | [Updates and Changes](#updates-and-changes)           |
 | 👁   | [Vision](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Personas%2B.md)            |
@@ -33,7 +32,7 @@ For any cybersecurity professional, scripting is an important part of testing th
 
 After downloading, double click the file. Done. 😀 👍
 
-## Usage
+## **Usage**
 
 Checking version and platform information: `csk -v` or `csk --version`.
 
@@ -65,6 +64,14 @@ for upon execution of the script.
 
 If another command is provided, then the command is run via the system shell program.
 
-## Updates and changes
+## **Updates and changes**
 
 > Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
+
+<br>
+
+---
+
+**This tool and all the scripts are for educational purposes and is to be used ethically.** 
+
+---
