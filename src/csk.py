@@ -4,11 +4,7 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-<<<<<<< HEAD
 from kit import http_headers, password_cracker, sql_inject, floodSYN
-=======
-from kit import http_headers, password_cracker, sql_inject
->>>>>>> aad7c91c6b9648b32ccfdd267fd047c1a98bc6b2
 import platform
 
 
