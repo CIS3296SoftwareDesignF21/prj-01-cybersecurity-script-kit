@@ -32,7 +32,7 @@ class SiteWrapper extends HIFullScreenView {
                         .background(HColor('blue'))
                         .foreground(HColor('background'))
                         .padding()
-                        .rounded()
+                        .rounded(50)
                 )
                     .width('100%')
                     .padding()

@@ -58,11 +58,11 @@ export default class HomePage extends VStack {
                         new ClickButton(
                             new HStack(
                                 new IonIcon('cloud-download-outline'),
-                                new TextView('Download').margin({ left: 10 })
+                                new TextView('Download').margin({ left: 15 })
                             )
                         )
                             .font('lg')
-                            .background(HColor('gray'))
+                            .background(HColor('blue'))
                             .foreground(rgb(255, 255, 255))
                             .padding()
                             .rounded()
