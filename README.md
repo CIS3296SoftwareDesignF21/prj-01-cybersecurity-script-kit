@@ -64,8 +64,10 @@ for upon execution of the script.
 | `install`          | `-d` or `--deps`, `package` | Installs the dependencies required for a specific script    |
 | `keylogger`        | none                        | Keeps track of all keystrokes on the keyboard               |
 | `chrome`        | none                        | Extracts and decrypts Google Chrome passwords              |
-| `n-scannerr`        | none                        | Scans the inputed IP address for devices on that network              |
+| `n-scannerr`        | none                        | Scans the IP address for devices on that network              |
 | `wifi-pw`        | none                        | Pulles known wifi network and their passwords              |
+| `p-scanner`        | none                        | Scans target for open ports            |
+
 
 If another command is provided, then the command is run via the system shell program.
 

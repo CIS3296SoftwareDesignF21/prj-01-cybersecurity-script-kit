@@ -75,6 +75,7 @@ class KitImportUtil:
         "scanner",
         "wifiPW",
         "changeMac",
+        "port_scanner",
     ]
 
     @staticmethod
@@ -130,5 +131,9 @@ class KitImportUtil:
                 from kit import changeMac
 
                 return changeMac
+            elif name == "port-scanner":
+                from kit import port_scanner
+
+                return port_scanner                
             else:
                 print("Error: KitImportUtil.include()")
