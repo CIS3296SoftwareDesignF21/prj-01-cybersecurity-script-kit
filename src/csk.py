@@ -4,7 +4,15 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger, dos, fileShred
+from kit import (
+    http_headers,
+    password_cracker,
+    sql_inject,
+    floodSYN,
+    keylogger,
+    dos,
+    fileShred,
+)
 import platform
 
 CSK_VERSION = "0.0.4"
@@ -60,6 +68,8 @@ def repl() -> int:
                     Installer.sql_scanner_deps()
                 elif args[1] == "keylogger":
                     Installer.keylogger_deps()
+                elif args[1] == "dos":
+                    Installer.dos_deps()
                 else:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:
