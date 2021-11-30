@@ -43,18 +43,6 @@
 - Python Doc Page: https://www.thepythoncode.com/article/create-fake-access-points-scapy
 - Github Doc: https://github.com/s0lst1c3/evil_twin/blob/master/utils.py
 
-#### Delivery Method 3: Drive By Download
-#### Authorized Downloads w/Hidden Payloads
-1. Create a vector for malware delivery
-- create online ad
-2. Victim interacts w/Vector
-- clicks deceptive link in ad
-3. Malware installs on victim device
-4. Device is successfully entered by attacker
-##### use bundleware method to deliver malware
-
-Doc: https://www.kaspersky.com/resource-center/definitions/drive-by-download
-
 #### Delivery Method 4: ARP Spoofing
 -Get the IP address that we want to spoof
 -Get the MAC address of the IP that we want to spoof
@@ -64,28 +52,5 @@ Doc: https://www.kaspersky.com/resource-center/definitions/drive-by-download
 -re-set the ARP tables of the spoofed address to defaults after spoofing
 doc: https://www.thepythoncode.com/article/building-arp-spoofer-using-scapy
  
- #### Delivery Method 5: HID Spoofing
- ##### USB 
- - Configure your payload
-    - use python config script
-    - manually config
- - compile & upload payload to removable media
- - configure server
- - control a reverse shell
- - Doc: https://github.com/ebursztein/malusb
- 
 
 
-
-
-Edited out, backup plan: 
-#### Delivery Method 4: Remote Desktop Protocol
-- created to enable IT administrators to securely access a user’s machine remotely to configure it, or to simply use the machine
-- RDP typically runs over port 3389
-- search for machines on search engines such as Shodan.io to find devices that are vulnerable to infection
-- gain access by brute-forcing the password 
-- log on as an administrator
--Use Open source password-cracking tools to help achieve this objective
-  - Popular tools: Cain and Able, John the Ripper, and Medusa
- - disable the endpoint security software running on the machine or delete Windows file backups prior to running the ransomware
- - Doc: https://www.itproportal.com/features/the-four-most-popular-methods-hackers-use-to-spread-ransomware/
