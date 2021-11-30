@@ -105,6 +105,31 @@ If you installed `csk` to another location, then the command looks like:
 ../path/to/csk [...args]    # For parent-relative path
 ```
 
+## Common Issues and Resolutions
+
+### Installation is not Working? (All Platforms)
+
+Prior to installation, please:
+
+-   Ensure you have a working Python 3.6+ installation.
+-   Ensure `pip` is installed (the Python Package Installer)
+-   Ensure `pyinstaller` is installed:
+    -   Run `pip3 install pyinstaller`
+    -   Run `pip install pyinstaller`, if the previous command does not work
+
+### Windows: PowerShell believes the script kit contains a virus?
+
+If you are on Windows, when working with the PowerShell, you may require elevated privileges.
+To escelate your privileges to `admin`, run the command below:
+
+```batch
+PS > Start-Process powershell -Verb runAs
+```
+
+You may also have to turn off `Real-time Protection` in your Virus & Threat Protection settings.
+
+![](readme/win-threat.png)
+
 ## Updates and changes
 
 > Instead of hosting on own site, make library directly on github. To test scripts, we will use GitHub CI. We will use the command line to download directly from GitHub.
@@ -157,6 +182,5 @@ This sequence diagram shows the user begin the csk tool by invoking the repl met
 Use Case 2
 
 This sequence diagram shows how the user would go about running the script that gets header information. After the main function is invoked, the user is prompted to input a command. The user's input is parsed with the getcmd() command. The selected script's run() method is called with the user's selected URL. The header information is printed to the terminal.
-
 
 ![Sequence 2](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/fixSequence/SD2v2.png?raw=true)
