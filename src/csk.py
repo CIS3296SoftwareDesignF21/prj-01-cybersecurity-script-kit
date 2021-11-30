@@ -7,6 +7,8 @@ from api import CLib, Git, Installer
 from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger
 import platform
 
+CSK_VERSION = "0.0.4"
+
 
 def print_art() -> None:
     print(
@@ -26,7 +28,7 @@ def prompt() -> str:
 
 def repl() -> int:
     print_art()
-    print(f"CSK v0.0.4 – {platform.system()}")
+    print(f"CSK v{CSK_VERSION} – {platform.system()}")
     while True:
         prompt_input = prompt()  # Get the input from the prompt
         cmd = getargs.getcmd(prompt_input)  # Extract the command from the input
@@ -37,7 +39,7 @@ def repl() -> int:
         if cmd == "exit":
             exit(0)
         elif cmd == "version":
-            print("0.0.1-alpha")
+            print(f"CSK v{CSK_VERSION}")
         elif cmd == "cd":
             CLib.cd(args[0])
         elif cmd == "clone":
