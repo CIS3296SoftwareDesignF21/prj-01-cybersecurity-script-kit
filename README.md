@@ -6,7 +6,7 @@
 [Week Two Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week2.md)
 &nbsp; 🔷 &nbsp;
 [Week Three Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/Week3.md)
-&nbsp; 🔷 &nbsp; [Week Four Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/ReadmeV2/markdowns/week4.md)
+&nbsp; 🔷 &nbsp; [Week Four Contributions](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/markdowns/week4.md)
 
  _For any cybersecurity professional, scripting is an important part of testing the defense of any network or computer system. This command line tool encompasses the entire Cyber Kill chain developed by Lockheed martin and is every pen-testers secrect weopon!_
 |     | Table of Contents                                     |
