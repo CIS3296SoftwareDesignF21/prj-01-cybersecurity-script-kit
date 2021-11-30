@@ -102,5 +102,9 @@ class KitImportUtil:
                 from kit import fileShred
 
                 return fileShred
+            elif name == "arpspoof":
+                from kit import arpspoof
+
+                return arpspoof
             else:
                 print("Error: KitImportUtil.include()")

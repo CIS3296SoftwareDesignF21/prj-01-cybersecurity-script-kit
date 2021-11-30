@@ -1,10 +1,11 @@
+import os
+import platform
+from os import getcwd, system
+from shutil import which
 from sys import argv, exit
-import platform
-from os import getcwd
+
 import getargs
-from os import system
 from api import CLib, Git, Installer, KitImportUtil
-import platform
 
 CSK_VERSION = "0.0.4"
 
@@ -81,6 +82,20 @@ def repl() -> int:
         elif cmd == "shred":
             program = KitImportUtil.include("fileShred")
             program.run()
+        elif cmd == "arpspoof":
+            program = KitImportUtil.include("arpspoof")
+            if len(args) == 0:
+                program.run(
+                    input("Enter the target IP: "), input("Enter the gateway IP: ")
+                )
+            elif len(args) == 1:
+                program.run(args[0], input("Enter the gateway IP: "))
+            else:
+                program.run(args[0], args[1])
+        elif cmd == "change-mac":
+            args_str = " ".join(args)
+            python_cmd = "python3" if which("python3") is not None else "python"
+            system(f"{python_cmd} {os.path.realpath()}/kit/changeMac.py {args_str}")
         else:
             system(prompt_input)
 
