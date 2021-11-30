@@ -4,7 +4,20 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject
+from kit import http_headers, password_cracker, sql_inject, floodSYN, keylogger
+import platform
+
+
+def print_art() -> None:
+    print(
+        """
+ ██████ ███████ ██   ██     ██    ██  ██████      ██████     ██   ██ 
+██      ██      ██  ██      ██    ██ ██  ████    ██  ████    ██   ██ 
+██      ███████ █████       ██    ██ ██ ██ ██    ██ ██ ██    ███████ 
+██           ██ ██  ██       ██  ██  ████  ██    ████  ██         ██ 
+ ██████ ███████ ██   ██       ████    ██████  ██  ██████  ██      ██                                                                
+    """
+    )
 
 
 def prompt() -> str:
@@ -12,6 +25,8 @@ def prompt() -> str:
 
 
 def repl() -> int:
+    print_art()
+    print(f"CSK v0.0.4 – {platform.system()}")
     while True:
         prompt_input = prompt()  # Get the input from the prompt
         cmd = getargs.getcmd(prompt_input)  # Extract the command from the input
@@ -35,6 +50,8 @@ def repl() -> int:
             password_cracker.run()
         elif cmd == "sql-inject":
             sql_inject.run()
+        elif cmd == "floodSYN":
+            floodSYN.run()
         elif cmd == "install":
             if args[0] == "--deps" or args[0] == "-d":
                 if args[1] == "sql-scanner":
@@ -45,6 +62,11 @@ def repl() -> int:
                     print(f"Package {args[1]} does not exist or has no dependencies")
             else:
                 print(f"No package found with name {args[0]}")
+        elif cmd == "keylogger":
+            kl = keylogger.Keylogger(
+                interval=keylogger.SEND_REPORT_EVERY, report_method="file"
+            )
+            kl.start()
         else:
             system(prompt_input)
 
