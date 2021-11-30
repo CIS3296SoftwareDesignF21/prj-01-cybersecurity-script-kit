@@ -1,9 +1,13 @@
-# Week 2 Review
+# Week 2 Contributions
+### Scrum review meeting: Due November 9, 2021
 
-Anya Tewari: Created the outline of scripts for delivery 
+&nbsp; Professor - Dominic Letarte TA - Noah Williams
+***
 
-Kasie Madden: Added  and  organized the tasks for all team members, created an outline for Weaponize  scripts, created a password cracker using random combinations and comparing and updated the readme. 
+**Anya Tewari:** Created the outline of scripts for delivery 
 
-Anna Gillen: Created the outline of scripts for delivery and created a script to collect header information
+**Kasie Madden:** Added  and  organized the tasks for all team members, created an outline for Weaponize  scripts, created a password cracker using random combinations and comparing and updated the readme. 
 
-Viraj Shah: Created the UML diagram, stared to outline and create the command line tool, created the windows make file 
+**Anna Gillen:** Created the outline of scripts for delivery and created a script to collect header information
+
+**Viraj Shah:** Created the UML diagram, stared to outline and create the command line tool, created the windows make file 
