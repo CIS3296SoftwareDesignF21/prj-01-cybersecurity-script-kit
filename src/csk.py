@@ -86,8 +86,11 @@ def repl() -> int:
             )
             kl.start()
         elif cmd == "dos":
-            program = KitImportUtil.include("dos")
-            program.run()
+            if platform.system() != "Windows":
+                print("This implementation of DDOS is only compatible with Windows.")
+            else:
+                program = KitImportUtil.include("dos")
+                program.run()
         elif cmd == "shred":
             program = KitImportUtil.include("fileShred")
             program.run()
