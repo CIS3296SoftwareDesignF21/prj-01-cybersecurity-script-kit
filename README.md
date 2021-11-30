@@ -150,12 +150,13 @@ Main file is CKS that the user will invoke to run the program. If there are no a
 
 Use Case 1
 
-This sequence diagram shows the user begin the csk tool by invoking the main method. The command line interface then prompts the user to enter a command. The user enters a command, and getcmd() is called to extract the command from the user input. In this case, the user wants to run the port scanner, so after this command is extracted from the input the run() method for recon2.py script is invoked with a host or URL as a command line argument, and the results are printed on the screen.
+This sequence diagram shows the user begin the csk tool by invoking the repl method. The command line interface then prompts the user to enter a command. The user enters a command, and getcmd() is called to extract the command from the user input. In this case, the user wants to run the port scanner, so after this command is extracted from the input the run() method for recon2.py script is invoked with a host or URL as a command line argument.
 
-![CSK_UML](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/sequenceDiagrams/sd1.png?raw=true)
+![Sequence 1](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/fixSequence/SD1v2.png?raw=true)
 
 Use Case 2
 
 This sequence diagram shows how the user would go about running the script that gets header information. After the main function is invoked, the user is prompted to input a command. The user's input is parsed with the getcmd() command. The selected script's run() method is called with the user's selected URL. The header information is printed to the terminal.
 
-![CSK](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/main/sd2.png?raw=true)
+
+![Sequence 2](https://github.com/CIS3296SoftwareDesignF21/prj-01-cybersecurity-script-kit/blob/fixSequence/SD2v2.png?raw=true)
