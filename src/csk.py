@@ -3,16 +3,7 @@ import platform
 from os import getcwd
 import getargs
 from os import system
-from api import CLib, Git, Installer
-from kit import (
-    http_headers,
-    password_cracker,
-    sql_inject,
-    floodSYN,
-    keylogger,
-    dos,
-    fileShred,
-)
+from api import CLib, Git, Installer, KitImportUtil
 import platform
 
 CSK_VERSION = "0.0.4"
@@ -55,13 +46,17 @@ def repl() -> int:
         elif cmd == "certifi":  # Installs certificates via Certifi
             Installer.certifi()
         elif cmd == "http-headers":
-            http_headers.run(args[0] if len(args) > 0 else input("URL: "))
+            program = KitImportUtil.include("http_headers")
+            program.run(args[0] if len(args) > 0 else input("URL: "))
         elif cmd == "password-cracker":
-            password_cracker.run()
+            program = KitImportUtil.include("password_cracker")
+            program.run()
         elif cmd == "sql-inject":
-            sql_inject.run()
+            program = KitImportUtil.include("sql_inject")
+            program.run()
         elif cmd == "floodSYN":
-            floodSYN.run()
+            program = KitImportUtil.include("floodSYN")
+            program.run()
         elif cmd == "install":
             if args[0] == "--deps" or args[0] == "-d":
                 if args[1] == "sql-scanner":
@@ -75,14 +70,17 @@ def repl() -> int:
             else:
                 print(f"No package found with name {args[0]}")
         elif cmd == "keylogger":
-            kl = keylogger.Keylogger(
-                interval=keylogger.SEND_REPORT_EVERY, report_method="file"
+            program = KitImportUtil.include("keylogger")
+            kl = program.Keylogger(
+                interval=program.SEND_REPORT_EVERY, report_method="file"
             )
             kl.start()
         elif cmd == "dos":
-            dos.run()
+            program = KitImportUtil.include("dos")
+            program.run()
         elif cmd == "shred":
-            fileShred.run()
+            program = KitImportUtil.include("fileShred")
+            program.run()
         else:
             system(prompt_input)
 
