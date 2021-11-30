@@ -4,7 +4,7 @@ from os import getcwd
 import getargs
 from os import system
 from api import CLib, Git, Installer
-from kit import http_headers, password_cracker, sql_inject
+from kit import http_headers, password_cracker, sql_inject, floodSYN
 import platform
 
 
@@ -50,6 +50,8 @@ def repl() -> int:
             password_cracker.run()
         elif cmd == "sql-inject":
             sql_inject.run()
+        elif cmd == "floodSYN":
+            floodSYN.run()
         elif cmd == "install":
             if args[0] == "--deps" or args[0] == "-d":
                 if args[1] == "sql-scanner":
