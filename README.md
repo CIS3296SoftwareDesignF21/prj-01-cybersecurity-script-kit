@@ -59,13 +59,15 @@ for upon execution of the script.
 | `certifi`          | none                        | Installs the python certificate for `http-headers`          |
 | `http-headers`     | `(url)`                     | Retrieves and prints the `http(s)` headers for a given URL  |
 | `password-cracker` | none                        | Attempts to crack a password                                |
-| `sql-inject`       | none                        | Attempts to manipulate HTML forms for "SQL Injection"       |
-| `floodSYN`         | none                        | I don't know                                                |
+| `sql-inject`       | none                        | Checks for vulnerability "SQL Injection"       |
+| `floodSYN`         | none                        |  Floods repeated SYN packets                                   |
 | `install`          | `-d` or `--deps`, `package` | Installs the dependencies required for a specific script    |
 | `keylogger`        | none                        | Keeps track of all keystrokes on the keyboard               |
 | `chrome`        | none                        | Extracts and decrypts Google Chrome passwords              |
-| `n-scannerr`        | none                        | Scans the inputed IP address for devices on that network              |
+| `n-scannerr`        | none                        | Scans the IP address for devices on that network              |
 | `wifi-pw`        | none                        | Pulles known wifi network and their passwords              |
+| `p-scanner`        | none                        | Scans target for open ports            |
+
 
 If another command is provided, then the command is run via the system shell program.
 

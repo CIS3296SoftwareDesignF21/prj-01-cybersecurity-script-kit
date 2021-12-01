@@ -128,6 +128,9 @@ def repl() -> int:
         elif cmd == "change-mac":
             program = KitImportUtil.include("changeMac")
             program.main()
+        elif cmd == "p-scanner":
+            program = KitImportUtil.include("port_scanner")
+            program.main()
         else:
             system(prompt_input)
 
